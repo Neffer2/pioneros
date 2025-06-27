@@ -17,6 +17,8 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
+            $table->foreignId('agente_id')->nulla;
+            $table->foreign('agente_id')->references('id')->on('agentes');
             $table->rememberToken();
             $table->timestamps();
         });
@@ -30,3 +32,4 @@ return new class extends Migration
         Schema::dropIfExists('users');
     }
 };
+

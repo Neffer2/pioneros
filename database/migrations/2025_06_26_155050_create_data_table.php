@@ -16,6 +16,8 @@ return new class extends Migration
             $table->text('fecha_registro');
             $table->text('kpi');
             $table->text('agente_comercial');
+            $table->foreignId('agente_id')->nullable();
+            $table->foreign('agente_id')->references('id')->on('agentes');
             $table->text('asesor');
             $table->text('pdv');
             $table->text('referencia');
