@@ -3,11 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ asset('css/login.css') }}?v={{ time() }}">
     <title>Iniciar Sesión - Pioneros</title>
 </head>
 <body>
-    <div>
-        <main>
+    <div class="login-container">
+        <div class="login-form">
+            <h1>Iniciar sesión</h1>
             @if (session('status'))
                 <div>{{ session('status') }}</div>
             @endif
@@ -31,22 +33,22 @@
                     @enderror
                 </div>
 
-                <div>
+                {{-- <div>
                     <label>
                         <input type="checkbox" name="remember">
                         Recordarme
                     </label>
-                </div>
+                </div> --}}
 
                 <div>
                     <button type="submit">Ingresar</button>
                     
                     @if (Route::has('password.request'))
-                        <a href="{{ route('password.request') }}">¿Olvidaste tu contraseña?</a>
+                        {{-- <a href="{{ route('password.request') }}">¿Olvidaste tu contraseña?</a> --}}
                     @endif
                 </div>
             </form>
-        </main>
+        </div>
     </div>
 </body>
 </html>
