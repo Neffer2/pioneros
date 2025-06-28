@@ -9,15 +9,15 @@
 <body>
     <div class="login-container">
         <div class="login-form">
-            <h1>Iniciar sesión</h1>
+            <h1 class="login-title">Iniciar sesión</h1>
             @if (session('status'))
                 <div>{{ session('status') }}</div>
             @endif
 
-            <form method="POST" action="{{ route('login') }}">
+            <form class="" method="POST" action="{{ route('login') }}">
                 @csrf
 
-                <div>
+                <div class="form-email">
                     <label for="email">Correo electrónico:</label>
                     <input id="email" type="email" name="email" value="{{ old('email') }}" required autofocus>
                     @error('email')
@@ -25,7 +25,7 @@
                     @enderror
                 </div>
 
-                <div>
+                <div class="form-password">
                     <label for="password">Contraseña:</label>
                     <input id="password" type="password" name="password" required>
                     @error('password')
@@ -40,7 +40,7 @@
                     </label>
                 </div> --}}
 
-                <div>
+                <div class="form-submit">
                     <button type="submit">Ingresar</button>
                     
                     @if (Route::has('password.request'))
