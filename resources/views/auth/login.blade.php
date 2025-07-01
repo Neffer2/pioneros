@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ asset('css/styles.css') }}?v={{ time() }}">
     <link rel="stylesheet" href="{{ asset('css/login.css') }}?v={{ time() }}">
     <title>Iniciar Sesión - Pioneros</title>
 </head>
@@ -14,7 +15,7 @@
                 <div>{{ session('status') }}</div>
             @endif
 
-            <form class="" method="POST" action="{{ route('login') }}">
+            <form class="form-login-container" method="POST" action="{{ route('login') }}">
                 @csrf
 
                 <div class="form-email">
@@ -33,12 +34,12 @@
                     @enderror
                 </div>
 
-                {{-- <div>
+                <div class="form-treatment">
                     <label>
-                        <input type="checkbox" name="remember">
-                        Recordarme
+                        <input type="checkbox" name="remember" required>
+                        Tratamiento de datos personales
                     </label>
-                </div> --}}
+                </div>
 
                 <div class="form-submit">
                     <button type="submit">Ingresar</button>

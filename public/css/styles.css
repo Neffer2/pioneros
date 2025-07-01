@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Emprint Bold', sans-serif;
+}
+
+@font-face {
+    font-family: 'Emprint Bold';
+    src: url('../assets/fonts/EMprint-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'Emprint Light';
+    src: url('../assets/fonts/EMprint-Light.ttf');
+}
+
+@font-face {
+    font-family: 'Emprint Regular';
+    src: url('../assets/fonts/EMprint-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Emprint SemiBold';
+    src: url('../assets/fonts/EMprint-Semibold.ttf');
+}
