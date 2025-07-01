@@ -8,6 +8,24 @@
     background-size: cover;
 }
 
+.logout-btn {
+    position: absolute;
+    top: 25%;
+    right: 18%;
+    z-index: 9999;
+}
+.logout-btn button {
+    background: none;
+    border: none;
+    font-size: 3rem;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.logout-btn button:hover {
+    color: #007bff;
+}
+
 .home-menu-container {
     display: flex;
     justify-content: center;
