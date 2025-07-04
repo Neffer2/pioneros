@@ -18,7 +18,7 @@
                     <img src="{{ asset('assets/menu-cronograma.png') }}" alt="Cronograma">
                     <span>CRONOGRAMA</span>
                 </a>
-                <a href="" class="menu-item">
+                <a href="{{ route('ranking') }}" class="menu-item">
                     <img src="{{ asset('assets/menu-ranking.png') }}" alt="Ranking AC">
                     <span>RANKING AC</span>
                 </a>

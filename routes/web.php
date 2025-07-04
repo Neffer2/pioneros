@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\RankingController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,6 +26,8 @@ Route::get('/importar', function () {
 Route::get('/about', function () {
     return view('sections.pioneros-about');
 })->middleware(['auth'])->name('about');
+
+Route::get('/ranking', [RankingController::class, 'index'])->middleware(['auth'])->name('ranking');
 
 Route::get('/cronograma', function () {
     return view('sections.cronograma');
