@@ -15,12 +15,28 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect()->route('login');
 });
+
+Route::get('/importar', function () {
+    return view('sections.import');
+})->middleware(['auth', 'is_admin'])->name('importar');
+
+Route::get('/about', function () {
+    return view('sections.pioneros-about');
+})->middleware(['auth'])->name('about');
+
+Route::get('/cronograma', function () {
+    return view('sections.cronograma');
+})->middleware(['auth'])->name('cronograma');
+
+Route::get('/premios', function () {
+    return view('sections.premios');
+})->middleware(['auth'])->name('premios');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+})->middleware(['auth'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
