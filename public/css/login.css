@@ -7,6 +7,14 @@
     background-image: url('../assets/fondo-login.png');
 }
 
+.logo-login-pioneros {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 25%;
+    height: auto;
+}
+
 .login-form {
     display: flex;
     justify-content: center;
@@ -68,7 +76,7 @@
     border: none;
     border-radius: 25px;
     background: linear-gradient(120deg, #e0e0e0 0%, #b0b0b0 40%, #ffffff 50%, #b0b0b0 60%, #e0e0e0 100%);
-    color: #14204a;
+    color: #003E71;
     font-size: 1.5rem;
     font-family: 'Emprint Bold', Arial, sans-serif;
     cursor: pointer;

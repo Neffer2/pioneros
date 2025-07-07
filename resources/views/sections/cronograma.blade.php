@@ -135,6 +135,7 @@
 
     <body>
         <div class="cronograma-container">
+            <img class="pioneros-logo-about" src="{{ asset('assets/main-pioneros-logo.png') }}" alt="">
             <a class="back-button" href="{{ route('dashboard') }}">
                 <i class="fa fa-arrow-left" aria-hidden="true" style="margin-right:8px;"></i> REGRESAR
             </a>
@@ -155,6 +156,8 @@
                     </ul>
                 </div>
             </div>
+            <img class="fill-with-mobil-logo" src="{{ asset('assets/fill-with-mobil.png') }}" alt="">
+
         </div>
     </body>
 

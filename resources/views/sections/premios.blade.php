@@ -3,10 +3,15 @@
 @section('content')
     {{-- <a href="{{ route('dashboard') }}">Volver</a> --}}
     <div class="premios-container">
+        <a class="back-button" href="{{ route('dashboard') }}">
+            <i class="fa fa-arrow-left" aria-hidden="true" style="margin-right:8px;"></i> REGRESAR
+        </a>
+        <img class="pioneros-logo-about" src="{{ asset('assets/main-pioneros-logo.png') }}" alt="">
         <div class="premios-info">
             <div class="premios-left-container">
                 <img src="{{ asset('assets/about-left-image.png') }}" alt="">
             </div>
+            
             <div class="premios-right-container">
                 <h2>Primer puesto</h2>
                 <p>
@@ -42,6 +47,6 @@
                 </p> --}}
             </div>
         </div>
-
+        <img class="fill-with-mobil-logo" src="{{ asset('assets/fill-with-mobil.png') }}" alt="">
     </div>
 @endsection

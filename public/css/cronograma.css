@@ -66,13 +66,13 @@
 .fc-toolbar-title {
     font-size: 2rem;
     font-weight: bold;
-    color: #003B73;
+    color: #003E71;
     letter-spacing: 1px;
 }
 
 /* Botones del calendario */
 .fc-button {
-    background: #003B73;
+    background: #003E71;
     color: #fff;
     border: none;
     border-radius: 6px;
@@ -89,7 +89,7 @@
 /* Días del calendario */
 .fc-daygrid-day {
     background: rgba(255,255,255,0.95);
-    color: #003B73;
+    color: #003E71;
     border: 1px solid #e0e0e0;
     min-width: 40px;
     min-height: 40px;
@@ -97,8 +97,8 @@
 }
 .fc-daygrid-day.fc-day-today {
     background: #ffe082 !important;
-    color: #003B73 !important;
-    border: 2px solid #003B73;
+    color: #003E71 !important;
+    border: 2px solid #003E71;
 }
 .fc-daygrid-day:hover {
     background: #e3f2fd;
@@ -107,7 +107,7 @@
 /* Encabezados de los días */
 .fc-col-header-cell {
     background: #f5f5f5;
-    color: #003B73;
+    color: #003E71;
     font-weight: bold;
     font-size: 1.1rem;
     border: 1px solid #e0e0e0;
@@ -162,7 +162,7 @@
 
 .cronograma-right-container h2 {
     font-size: 2rem;
-    color: #003B73;
+    color: #003E71;
     margin-bottom: 15px;
     text-transform: uppercase;
 }
@@ -182,6 +182,6 @@
 }
 
 .eventos-importantes li::marker {
-    color: #003B73;
+    color: #003E71;
     font-size: 1.5rem;
 }

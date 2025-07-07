@@ -9,6 +9,7 @@
 </head>
 <body>
     <div class="login-container">
+        <img src="{{ asset('assets/logo-login-pioneros.png') }}" class="logo-login-pioneros" alt="Logo Pioneros">
         <div class="login-form">
             <h1 class="login-title">Iniciar sesión</h1>
             @if (session('status'))

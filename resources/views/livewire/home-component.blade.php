@@ -29,7 +29,8 @@
                     <img src="{{ asset('assets/menu-premios.png') }}" alt="Premios">
                     <span>PREMIOS</span>
                 </a>
-                <a href="" class="menu-item">
+                <a href="{{ asset('assets/legal/Terminos_y_Condiciones_Concurso_Flagship.pdf') }}" class="menu-item"
+                    target="_blank">
                     <img src="{{ asset('assets/menu-tyc.png') }}" alt="T&C">
                     <span>T&C</span>
                 </a>
