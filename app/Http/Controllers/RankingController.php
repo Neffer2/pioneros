@@ -17,26 +17,31 @@ class RankingController extends Controller
         $crecimiento_flagship = Agente::select('crecimiento_flagship')
             ->whereNotNull('crecimiento_flagship')
             ->orderBy('crecimiento_flagship', 'desc')
+            ->limit(10)
             ->get();
 
         $crecimiento_galones = Agente::select('crecimiento_galones')
             ->whereNotNull('crecimiento_galones')
             ->orderBy('crecimiento_galones', 'desc')
+            ->limit(10)
             ->get();
 
         $penetracion_flagship = Agente::select('penetracion_flagship')
             ->whereNotNull('penetracion_flagship')
             ->orderBy('penetracion_flagship', 'desc')
+            ->limit(10)
             ->get();
 
         $mix_flagship = Agente::select('mix_flagship')
             ->whereNotNull('mix_flagship')
             ->orderBy('mix_flagship', 'desc')
+            ->limit(10)
             ->get();
 
         $pops_flagship = Agente::select('pops_flagship')
             ->whereNotNull('pops_flagship')
             ->orderBy('pops_flagship', 'desc')
+            ->limit(10)
             ->get();
 
         return view('sections.ranking', compact(

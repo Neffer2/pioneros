@@ -44,6 +44,11 @@
     height: 100%;
 }
 
+.ranking-left-container img {
+    width: 100%;
+    height: auto;
+}
+
 .ranking-right-container {
     display: flex;
     flex-direction: column;
@@ -52,3 +57,50 @@
     width: 45%;
     height: 100%;
 }
+
+.ranking-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 12px; /* Espacio entre filas */
+}
+
+.ranking-table tbody {
+    border: blue;
+}
+
+.ranking-table tr {
+    background: rgba(70, 130, 180, 0.18); /* Fondo translúcido azul */
+    border-radius: 8px;
+}
+
+.ranking-table td {
+    background: transparent;
+    color: #fff;
+    font-size: 1.7rem;
+    font-weight: bold;
+    padding: 8px 18px;
+    text-shadow: 0 1px 2px #1a357a, 0 -1px 1px #888;
+}
+
+.ranking-table td:first-child {
+    width: 60px;
+    text-align: center;
+    color: #e6e6e6;
+    background: transparent;
+}
+
+.ranking-table td:nth-child(2) {
+    text-align: left;
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    background: transparent;
+}
+
+.ranking-table td:last-child {
+    text-align: right;
+    color: #fff;
+    background: transparent;
+    min-width: 80px;
+}
+
