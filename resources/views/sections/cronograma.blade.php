@@ -8,6 +8,7 @@
         <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.17/locales/es.global.min.js'></script>
         <link rel="stylesheet" href="{{ asset('css/styles.css') }}?v={{ time() }}">
         <link rel="stylesheet" href="{{ asset('css/cronograma.css') }}?v={{ time() }}">
+        <link rel="icon" href="{{ asset('assets/favicon.png') }}" type="image/png">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
             crossorigin="anonymous" referrerpolicy="no-referrer" />
         <link rel="stylesheet" href="{{ asset('css/cronograma.css') }}?v={{ time() }}">
@@ -137,7 +138,7 @@
         <div class="cronograma-container">
             <img class="pioneros-logo-about" src="{{ asset('assets/main-pioneros-logo.png') }}" alt="">
             <a class="back-button" href="{{ route('dashboard') }}">
-                <i class="fa fa-arrow-left" aria-hidden="true" style="margin-right:8px;"></i> REGRESAR
+                <i class="fa fa-arrow-left" id="icono-regresar" aria-hidden="true"></i> REGRESAR
             </a>
             <div class="cronograma-info">
                 <div class="cronograma-left-container">
