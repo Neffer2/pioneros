@@ -6,78 +6,11 @@
         <title>Mi Calendario Personalizado</title>
         <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.17/index.global.min.js'></script>
         <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.17/locales/es.global.min.js'></script>
-        <style>
-            body {
-                font-family: 'Arial', sans-serif;
-                background-color: #f5f5f5;
-                margin: 0;
-                padding: 20px;
-            }
-
-            #calendar {
-                max-width: 1200px;
-                margin: 0 auto;
-                background: white;
-                border-radius: 10px;
-                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-                padding: 20px;
-            }
-
-            /* Personalizar colores del header */
-            .fc-toolbar-title {
-                color: #2c3e50 !important;
-                font-weight: bold !important;
-            }
-
-            .fc-button-primary {
-                background-color: #3498db !important;
-                border-color: #3498db !important;
-            }
-
-            .fc-button-primary:hover {
-                background-color: #2980b9 !important;
-                border-color: #2980b9 !important;
-            }
-
-            /* Personalizar días de la semana */
-            .fc-col-header-cell {
-                background-color: #ecf0f1 !important;
-                font-weight: bold;
-            }
-
-            /* Personalizar días del mes */
-            .fc-daygrid-day:hover {
-                background-color: #f8f9fa !important;
-            }
-
-            /* Personalizar el día actual */
-            .fc-day-today {
-                background-color: #e8f5e8 !important;
-            }
-
-            /* Personalizar eventos */
-            .fc-event {
-                border-radius: 5px !important;
-                border: none !important;
-                padding: 2px 5px !important;
-            }
-
-            /* Diferentes colores para tipos de eventos */
-            .evento-trabajo {
-                background-color: #e74c3c !important;
-                color: white !important;
-            }
-
-            .evento-personal {
-                background-color: #9b59b6 !important;
-                color: white !important;
-            }
-
-            .evento-reunion {
-                background-color: #f39c12 !important;
-                color: white !important;
-            }
-        </style>
+        <link rel="stylesheet" href="{{ asset('css/styles.css') }}?v={{ time() }}">
+        <link rel="stylesheet" href="{{ asset('css/cronograma.css') }}?v={{ time() }}">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="{{ asset('css/cronograma.css') }}?v={{ time() }}">
         <script>
             document.addEventListener('DOMContentLoaded', function() {
                 var calendarEl = document.getElementById('calendar');
@@ -105,7 +38,7 @@
 
                     // ALTURA DEL CALENDARIO
                     height: 'auto',
-                    contentHeight: 600,
+                    contentHeight: 400,
 
                     // CONFIGURACIÓN DE DÍAS
                     weekends: true, // Mostrar fines de semana
@@ -113,8 +46,7 @@
                     moreLinkText: 'más eventos',
 
                     // EVENTOS DE EJEMPLO
-                    events: [
-                        {
+                    events: [{
                             title: 'Reunión de equipo',
                             start: '2025-06-27T10:00:00',
                             end: '2025-06-27T11:30:00',
@@ -140,7 +72,8 @@
                     eventClick: function(info) {
                         alert('Evento: ' + info.event.title +
                             '\nFecha: ' + info.event.start.toLocaleDateString('es-ES') +
-                            '\nDescripción: ' + (info.event.extendedProps.description || 'Sin descripción'));
+                            '\nDescripción: ' + (info.event.extendedProps.description ||
+                                'Sin descripción'));
                     },
 
                     dateClick: function(info) {
@@ -165,7 +98,9 @@
                     },
 
                     // CONFIGURACIÓN DE VISTA
-                    dayHeaderFormat: { weekday: 'long' },
+                    dayHeaderFormat: {
+                        weekday: 'long'
+                    },
 
                     // CONFIGURACIÓN DE TIEMPO
                     slotMinTime: '08:00:00',
@@ -199,8 +134,28 @@
     </head>
 
     <body>
-        <a href="{{ route('dashboard') }}">Volver</a>
-        <div id='calendar'></div>
+        <div class="cronograma-container">
+            <a class="back-button" href="{{ route('dashboard') }}">
+                <i class="fa fa-arrow-left" aria-hidden="true" style="margin-right:8px;"></i> REGRESAR
+            </a>
+            <div class="cronograma-info">
+                <div class="cronograma-left-container">
+                    <div id='calendar'></div>
+
+                </div>
+
+                <div class="cronograma-right-container">
+                    <h2>CRONOGRAMA</h2>
+                    <ul class="eventos-importantes">
+                        <li>Evento virtual: 1 de julio</li>
+                        <li>Inicio: 1ra semana julio</li>
+                        <li>Período evaluación</li>
+                        <li>1er trimestre: 1 de julio al</li>
+                        <li>19 de septiembre</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </body>
 
     </html>

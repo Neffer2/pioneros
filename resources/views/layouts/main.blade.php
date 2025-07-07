@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="{{ asset('css/styles.css') }}?v={{ time() }}">
     <link rel="stylesheet" href="{{ asset('css/home.css') }}?v={{ time() }}">
+    <link rel="stylesheet" href="{{ asset('css/about.css') }}?v={{ time() }}">
+    <link rel="stylesheet" href="{{ asset('css/cronograma.css') }}?v={{ time() }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>@yield('title')</title>
 </head>

@@ -7,6 +7,7 @@
             </button>
         </form>
     </div>
+    <img class="pioneros-logo-about" src="{{ asset('assets/main-pioneros-logo.png') }}" alt="">
     <div class="home-menu-container">
         <div class="menu-grid">
             <div class="menu-top">
@@ -42,4 +43,5 @@
             </div>
         </div>
     </div>
+    <img class="fill-with-mobil-logo" src="{{ asset('assets/fill-with-mobil.png') }}" alt="">
 </div>
