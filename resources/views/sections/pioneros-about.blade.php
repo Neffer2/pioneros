@@ -5,7 +5,7 @@
 
         <img class="pioneros-logo-about" src="{{ asset('assets/main-pioneros-logo.png') }}" alt="">
         <a class="back-button" href="{{ route('dashboard') }}">
-             <i class="fa fa-arrow-left" id="icono-regresar" aria-hidden="true"></i> REGRESAR
+             <i class="fa fa-arrow-left" id="icono-regresar" aria-hidden="true"></i> Regresar
         </a>
 
         <div class="about-info">

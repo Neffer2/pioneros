@@ -8,39 +8,19 @@
     background-size: cover;
 }
 
-.logout-btn {
-    position: absolute;
-    top: 25%;
-    right: 18%;
-    z-index: 9999;
-}
-.logout-btn button {
-    background: none;
-    border: none;
-    font-size: 3rem;
-    color: #fff;
-    cursor: pointer;
-    transition: all 0.2s;
-}
-.logout-btn button:hover {
-    color: #003E71;
-}
-
 .home-menu-container {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 60%;
-    height: 600px;
-    background-image: url('../assets/placa-home.png');
-    background-size: cover;
-    background-position: center;
+    height: 100%;
 }
 
 .menu-grid {
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100%;
     flex-direction: column;
     gap: 20px;
 }
@@ -66,24 +46,29 @@
 }
 
 .menu-item img {
-    width: 220px;
-    height: 130px;
+    width: 300px;
+    height: 225px;
     object-fit: cover;
-    border-radius: 8px;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.18);
-    margin-bottom: 0.7rem;
-    border: 6px solid #1a357a;
-    background: #fff;
+    margin-bottom: 10px;
+    border: 6px solid; 
+    border-image: linear-gradient(
+        90deg,
+        #3F3F3F 0%,
+        #FFFFFF 9%,
+        #A7A7AA 19%,
+        #666666 38%,
+        #FFFFFF 87%,
+        #B8B8B8 100%
+    ) 1;
 }
 
 .menu-item span {
     text-align: center;
-    margin-top: 0.2rem;
-    color: #003E71;
-    font-size: 1.1rem;
-    font-weight: bold;
+    margin-top: 5px;
+    color: #fff;
+    font-size: 1.3rem;
+    font-weight: 600;
     letter-spacing: 1px;
-    text-shadow: 0 1px 2px #fff, 0 -1px 1px #888;
 }
 
 .menu-item:hover {

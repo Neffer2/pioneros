@@ -4,7 +4,7 @@
     {{-- <a href="{{ route('dashboard') }}">Volver</a> --}}
     <div class="premios-container">
         <a class="back-button" href="{{ route('dashboard') }}">
-            <i class="fa fa-arrow-left" id="icono-regresar" aria-hidden="true"></i> REGRESAR
+            <i class="fa fa-arrow-left" id="icono-regresar" aria-hidden="true"></i> Regresar
         </a>
         <img class="pioneros-logo-about" src="{{ asset('assets/main-pioneros-logo.png') }}" alt="">
         <div class="premios-info">
