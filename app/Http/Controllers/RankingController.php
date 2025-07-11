@@ -14,6 +14,12 @@ class RankingController extends Controller
      */
     public function index()
     {
+        $general = Agente::select('*')
+            ->selectRaw('(COALESCE(crecimiento_flagship, 0) + COALESCE(crecimiento_galones, 0) + COALESCE(penetracion_flagship, 0) + COALESCE(mix_flagship, 0) + COALESCE(pops_flagship, 0)) as total_puntos')
+            ->orderBy('total_puntos', 'desc')
+            ->limit(10)
+            ->get();
+
         $crecimiento_flagship = Agente::select('crecimiento_flagship')
             ->whereNotNull('crecimiento_flagship')
             ->orderBy('crecimiento_flagship', 'desc')
@@ -45,6 +51,7 @@ class RankingController extends Controller
             ->get();
 
         return view('sections.ranking', compact(
+            'general',
             'crecimiento_flagship',
             'crecimiento_galones',
             'penetracion_flagship',
