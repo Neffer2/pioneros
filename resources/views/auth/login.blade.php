@@ -10,6 +10,7 @@
 <body>
     <div class="login-container">
         <img src="{{ asset('assets/logo-login-pioneros.png') }}" class="logo-login-pioneros" alt="Logo Pioneros">
+         <img src="{{ asset('assets/fill-with-mobil.png') }}" class="logo-login-pioneros-right" alt="Logo Fill With Mobil">
         <div class="login-form">
             <h1 class="login-title">Iniciar sesión</h1>
             @if (session('status'))

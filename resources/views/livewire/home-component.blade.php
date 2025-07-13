@@ -45,4 +45,5 @@
         </div>
     </div>
     <img class="fill-with-mobil-logo" src="{{ asset('assets/fill-with-mobil.png') }}" alt="">
+    @livewire('footer-component')
 </div>

@@ -1,7 +1,7 @@
 .login-container {
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    align-items: flex-start;
     justify-content: center;
     height: 100vh;
     background-image: url('../assets/fondo-login.png');
@@ -10,8 +10,16 @@
 .logo-login-pioneros {
     position: absolute;
     top: 20px;
+    left: 20px;
+    width: 20%;
+    height: auto;
+}
+
+.logo-login-pioneros-right {
+    position: absolute;
+    top: 20px;
     right: 20px;
-    width: 25%;
+    width: 18%;
     height: auto;
 }
 

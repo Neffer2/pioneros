@@ -4,9 +4,10 @@
     <div class="about-container">
 
         <img class="pioneros-logo-about" src="{{ asset('assets/main-pioneros-logo.png') }}" alt="">
-        <a class="back-button" href="{{ route('dashboard') }}">
+        <img class="fill-with-mobil-logo" src="{{ asset('assets/fill-with-mobil.png') }}" alt="">
+        {{-- <a class="back-button" href="{{ route('dashboard') }}"> --}}
              <i class="fa fa-arrow-left" id="icono-regresar" aria-hidden="true"></i> Regresar
-        </a>
+        {{-- </a> --}}
 
         <div class="about-info">
 
@@ -14,7 +15,7 @@
                 <img src="{{ asset('assets/about-left-image.png') }}" alt="">
             </div>
             <div class="about-right-container">
-                <h1>¿Qué es Pioneros?</h1>
+                <h1>¿Qué es P1oneros?</h1>
                 <p>
                     Una iniciativa de Mobil Industria para reconocer el trabajo, las acciones y los resultados obtenidos por
                     las duplas de los agentes comerciales (ingeniero + asesor) con la venta y uso de productos sintéticos
@@ -25,7 +26,6 @@
             </div>
         </div>
 
-        <img class="fill-with-mobil-logo" src="{{ asset('assets/fill-with-mobil.png') }}" alt="">
-
+        @livewire('footer-component')
     </div>
 @endsection

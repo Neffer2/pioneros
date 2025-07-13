@@ -8,6 +8,7 @@
         <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.17/locales/es.global.min.js'></script>
         <link rel="stylesheet" href="{{ asset('css/styles.css') }}?v={{ time() }}">
         <link rel="stylesheet" href="{{ asset('css/cronograma.css') }}?v={{ time() }}">
+        <link rel="stylesheet" href="{{ asset('css/footer.css') }}?v={{ time() }}">
         <link rel="icon" href="{{ asset('assets/favicon.png') }}" type="image/png">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
             crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -137,9 +138,10 @@
     <body>
         <div class="cronograma-container">
             <img class="pioneros-logo-about" src="{{ asset('assets/main-pioneros-logo.png') }}" alt="">
-            <a class="back-button" href="{{ route('dashboard') }}">
+            <img class="fill-with-mobil-logo" src="{{ asset('assets/fill-with-mobil.png') }}" alt="">
+            {{-- <a class="back-button" href="{{ route('dashboard') }}">
                 <i class="fa fa-arrow-left" id="icono-regresar" aria-hidden="true"></i> Regresar
-            </a>
+            </a> --}}
             <div class="cronograma-info">
                 <div class="cronograma-left-container">
                     <div id='calendar'></div>
@@ -147,7 +149,7 @@
                 </div>
 
                 <div class="cronograma-right-container">
-                    <h2>CRONOGRAMA</h2>
+                    <h2>Cronograma</h2>
                     <ul class="eventos-importantes">
                         <li>Evento virtual: 1 de julio</li>
                         <li>Inicio: 1ra semana julio</li>
@@ -157,7 +159,9 @@
                     </ul>
                 </div>
             </div>
-            <img class="fill-with-mobil-logo" src="{{ asset('assets/fill-with-mobil.png') }}" alt="">
+            <div class="footer-component">
+                {{-- Footer info --}}
+            </div>
 
         </div>
     </body>

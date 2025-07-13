@@ -38,10 +38,11 @@
     @endphp
 
     <div class="ranking-container">
-        <a class="back-button" href="{{ route('dashboard') }}">
+        {{-- <a class="back-button" href="{{ route('dashboard') }}">
             <i class="fa fa-arrow-left" id="icono-regresar" aria-hidden="true"></i> Regresar
-        </a>
+        </a> --}}
         <img class="pioneros-logo-about" src="{{ asset('assets/main-pioneros-logo.png') }}" alt="">
+        <img class="fill-with-mobil-logo" src="{{ asset('assets/fill-with-mobil.png') }}" alt="">
 
         {{-- Botones para cambiar ranking --}}
         <div class="ranking-switcher">
@@ -84,7 +85,7 @@
                     @endphp
                     <div class="ranking-section" id="table-{{ $ranking['key'] }}"
                         style="display: {{ $i === 0 ? 'block' : 'none' }};">
-                        <h4 class="ranking-title">RANKINGS AC</h4>
+                        <h4 class="ranking-title">RARA</h4>
                         <table class="ranking-table">
                             <tbody>
                                 @foreach ($resto as $j => $agente)
@@ -102,7 +103,7 @@
                 @endforeach
             </div>
         </div>
-        <img class="fill-with-mobil-logo" src="{{ asset('assets/fill-with-mobil.png') }}" alt="">
+        @livewire('footer-component')
     </div>
 
     <script>
