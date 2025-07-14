@@ -12,10 +12,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     width: 60%;
-    height: 600px;
-    gap: 25px;
-    padding: 20px;
+    height: 700px;
+    padding: 5px;
     background: linear-gradient(to right, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.85) 100%);
     border-radius: 10px;
     box-shadow: 0 4px 24px rgba(0, 0, 0, 0.10);
@@ -35,87 +35,143 @@
     background: #e6e6e6;
 }
 
-/* Calendario */
-
-#calendar {
+/* Contenedor de la tabla */
+.cronograma-table-container {
     width: 100%;
     height: 100%;
-    min-width: 350px;
-    min-height: 400px;
-    background: #fff;
+    overflow-x: auto;
+    overflow-y: auto;
+    background: transparent;
     border-radius: 18px;
     box-shadow: 0 4px 24px rgba(0,0,0,0.10);
-    padding: 16px 8px 8px 8px;
+    padding: 16px;
     box-sizing: border-box;
-    overflow: hidden;
 }
 
-/* Ajusta el header del calendario */
-.fc-toolbar {
-    margin-bottom: 12px;
-    background: transparent;
-    border-radius: 10px 10px 0 0;
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+/* Tabla principal */
+.cronograma-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+    font-size: 1.3rem;
+    min-width: 1000px;
 }
 
-/* Ajusta el título del calendario */
-.fc-toolbar-title {
-    font-size: 2rem;
+/* Headers */
+.cronograma-table th {
+    background-color: #003E71;
+    color: white;
+    padding: 8px 4px;
+    text-align: center;
     font-weight: bold;
-    color: #003E71;
-    letter-spacing: 1px;
+    border: 1px solid #002851;
 }
 
-/* Botones del calendario */
-.fc-button {
-    background: #003E71;
-    color: #fff;
-    border: none;
-    border-radius: 6px;
-    margin: 0 2px;
-    padding: 6px 14px;
+.descripcion-header {
+    background-color: #6c757d !important;
+    width: 200px;
+    min-width: 200px;
+}
+
+.year-header {
+    background-color: #003E71;
+    font-size: 1.3rem;
+}
+
+.month-header {
+    background-color: #004a87;
+    font-size: 1rem;
+    width: 60px;
+}
+
+/* Celdas del cuerpo */
+.cronograma-table td {
+    padding: 6px 4px;
+    text-align: center;
+    border: 1px solid #ddd;
+    font-size: 0.8rem;
+    vertical-align: middle;
+    height: 35px;
+}
+
+.descripcion-cell {
+    background-color: #003E71;
+    color: white;
+    text-align: left;
+    padding: 8px;
+    font-weight: 500;
+    width: 200px;
+    min-width: 200px;
+}
+
+/* Colores para diferentes tipos de eventos */
+.rojo {
+    background-color: #dc3545 !important;
+    color: white !important;
+    font-weight: bold;
+}
+
+.rojo-span {
+    background-color: #dc3545 !important;
+    color: white !important;
+    font-weight: bold;
+    font-size: 10px;
+}
+
+.azul {
+    background-color: #007bff !important;
+    color: white !important;
+    font-weight: bold;
+}
+
+/* Celdas normales con datos */
+.cronograma-table td:not(.descripcion-cell):not(.rojo):not(.rojo-span):not(.azul) {
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+.cronograma-table td:not(.descripcion-cell):not(.rojo):not(.rojo-span):not(.azul):not(:empty) {
+    background-color: #e9ecef;
     font-weight: 600;
-    transition: background 0.2s;
-}
-.fc-button:hover, .fc-button-active {
-    background: #00509e;
-    color: #fff;
 }
 
-/* Días del calendario */
-.fc-daygrid-day {
-    background: rgba(255,255,255,0.95);
-    color: #003E71;
-    border: 1px solid #e0e0e0;
-    min-width: 40px;
-    min-height: 40px;
-    transition: background 0.2s;
-}
-.fc-daygrid-day.fc-day-today {
-    background: #ffe082 !important;
-    color: #003E71 !important;
-    border: 2px solid #003E71;
-}
-.fc-daygrid-day:hover {
-    background: #e3f2fd;
-}
-
-/* Encabezados de los días */
-.fc-col-header-cell {
-    background: #f5f5f5;
-    color: #003E71;
-    font-weight: bold;
-    font-size: 1.1rem;
-    border: 1px solid #e0e0e0;
+/* Responsive */
+@media (max-width: 1200px) {
+    .cronograma-table {
+        font-size: 10px;
+        min-width: 900px;
+    }
+    
+    .month-header {
+        width: 50px;
+    }
+    
+    .descripcion-cell {
+        width: 180px;
+        min-width: 180px;
+    }
 }
 
-/* Quita el scroll horizontal */
-.fc-scroller-harness, .fc-scroller {
-    overflow-x: hidden !important;
+@media (max-width: 768px) {
+    .cronograma-table-container {
+        padding: 8px;
+    }
+    
+    .cronograma-table {
+        font-size: 15px;
+        min-width: 800px;
+    }
+    
+    .cronograma-table th,
+    .cronograma-table td {
+        padding: 4px 2px;
+    }
+    
+    .descripcion-cell {
+        width: 160px;
+        min-width: 160px;
+        font-size: 10px;
+    }
 }
 
 /* Responsive para pantallas pequeñas */
@@ -140,7 +196,7 @@
 
 /* Fin calendario */
 
-.cronograma-left-container {
+.cronograma-calendar-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -151,36 +207,26 @@
     min-height: 400px;
 }
 
-.cronograma-right-container {
+.cronograma-top-container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
-    width: 45%;
-    height: 100%;
+    flex-direction: row;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
-.cronograma-right-container h2 {
+.cronograma-top-container h2 {
     font-size: 2rem;
     color: #003E71;
-    margin-bottom: 15px;
 }
 
-.eventos-importantes {
-    margin-top: 32px;
-    margin-bottom: 32px;
-    padding-left: 24px;
-    list-style-type: disc;
-}
-
-.eventos-importantes li {
-    color: #444444;
-    font-weight: 600;
-    font-size: 1.5rem;
-    margin-bottom: 15px;
-}
-
-.eventos-importantes li::marker {
-    color: #003E71;
-    font-size: 1.5rem;
+.cronograma-top-container p {
+    font-size: 1.2rem;
+    font-family: 'Emprint Light', sans-serif;
+    font-weight: bold;
+    color: #000;
+    margin: 0;
 }

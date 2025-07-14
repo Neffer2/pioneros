@@ -4,8 +4,7 @@
         <meta charset='utf-8' />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Mi Calendario Personalizado</title>
-        <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.17/index.global.min.js'></script>
-        <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.17/locales/es.global.min.js'></script>
+
         <link rel="stylesheet" href="{{ asset('css/styles.css') }}?v={{ time() }}">
         <link rel="stylesheet" href="{{ asset('css/cronograma.css') }}?v={{ time() }}">
         <link rel="stylesheet" href="{{ asset('css/footer.css') }}?v={{ time() }}">
@@ -14,123 +13,170 @@
             crossorigin="anonymous" referrerpolicy="no-referrer" />
         <link rel="stylesheet" href="{{ asset('css/cronograma.css') }}?v={{ time() }}">
         <script>
-            document.addEventListener('DOMContentLoaded', function() {
-                var calendarEl = document.getElementById('calendar');
-                var calendar = new FullCalendar.Calendar(calendarEl, {
-                    // CONFIGURACIÓN BÁSICA
-                    initialView: 'dayGridMonth',
-                    locale: 'es', // Idioma español
-                    firstDay: 1, // Lunes como primer día de la semana
-
-                    // CONFIGURACIÓN DEL HEADER
-                    headerToolbar: {
-                        left: 'prev,next today',
-                        center: 'title',
-                        right: 'dayGridMonth,timeGridWeek,timeGridDay,listMonth'
-                    },
-
-                    // CONFIGURACIÓN DE BOTONES
-                    buttonText: {
-                        today: 'Hoy',
-                        month: 'Mes',
-                        week: 'Semana',
-                        day: 'Día',
-                        list: 'Lista'
-                    },
-
-                    // ALTURA DEL CALENDARIO
-                    height: 'auto',
-                    contentHeight: 400,
-
-                    // CONFIGURACIÓN DE DÍAS
-                    weekends: true, // Mostrar fines de semana
-                    dayMaxEvents: 3, // Máximo 3 eventos por día antes de mostrar "+más"
-                    moreLinkText: 'más eventos',
-
-                    // EVENTOS DE EJEMPLO
-                    events: [{
-                            title: 'Reunión de equipo',
-                            start: '2025-06-27T10:00:00',
-                            end: '2025-06-27T11:30:00',
-                            className: 'evento-reunion',
-                            description: 'Reunión semanal del equipo de desarrollo'
-                        },
-                        {
-                            title: 'Proyecto Laravel',
-                            start: '2025-06-28',
-                            end: '2025-06-30',
-                            className: 'evento-trabajo',
-                            description: 'Desarrollo del sistema de pioneros'
-                        },
-                        {
-                            title: 'Cita médica',
-                            start: '2025-06-29T15:00:00',
-                            className: 'evento-personal',
-                            description: 'Consulta médica anual'
-                        }
-                    ],
-
-                    // EVENTOS DE INTERACCIÓN
-                    eventClick: function(info) {
-                        alert('Evento: ' + info.event.title +
-                            '\nFecha: ' + info.event.start.toLocaleDateString('es-ES') +
-                            '\nDescripción: ' + (info.event.extendedProps.description ||
-                                'Sin descripción'));
-                    },
-
-                    dateClick: function(info) {
-                        var title = prompt('Ingresa el título del evento:');
-                        if (title) {
-                            calendar.addEvent({
-                                title: title,
-                                start: info.date,
-                                allDay: true,
-                                className: 'evento-personal'
-                            });
-                        }
-                    },
-
-                    // CONFIGURACIÓN DE ARRASTRAR Y SOLTAR
-                    editable: true,
-                    droppable: true,
-
-                    eventDrop: function(info) {
-                        alert('Evento "' + info.event.title + '" movido a ' +
-                            info.event.start.toLocaleDateString('es-ES'));
-                    },
-
-                    // CONFIGURACIÓN DE VISTA
-                    dayHeaderFormat: {
-                        weekday: 'long'
-                    },
-
-                    // CONFIGURACIÓN DE TIEMPO
-                    slotMinTime: '08:00:00',
-                    slotMaxTime: '20:00:00',
-                    slotDuration: '00:30:00',
-
-                    // CONFIGURACIÓN DE NAVEGACIÓN
-                    navLinks: true, // Permite hacer clic en días/semanas para navegar
-
-                    // CONFIGURACIÓN DE SELECCIÓN
-                    selectable: true,
-                    selectMirror: true,
-
-                    select: function(info) {
-                        var title = prompt('Nuevo evento:');
-                        if (title) {
-                            calendar.addEvent({
-                                title: title,
-                                start: info.start,
-                                end: info.end,
-                                className: 'evento-trabajo'
-                            });
-                        }
-                        calendar.unselect();
+            // Datos del cronograma - esto puede venir de la base de datos
+            const cronogramaData = [{
+                    descripcion: 'Invitación evento lanzamiento',
+                    fechas: {
+                        'jul-2025': 14
                     }
-                });
+                },
+                {
+                    descripcion: 'Evento de lanzamiento',
+                    fechas: {
+                        'jul-2025': 21
+                    }
+                },
+                {
+                    descripcion: 'Inscripciones AC',
+                    fechas: {
+                        'jul-2025': '21 al 25'
+                    },
+                    clase: 'rojo'
+                },
+                {
+                    descripcion: 'Comunicación inicio actividad',
+                    fechas: {
+                        'ago-2025': 1
+                    }
+                },
+                {
+                    descripcion: 'Fases de la actividad',
+                    fechas: {
+                        'ago-2025': '1ra bandera (1 agosto al 31 diciembre)',
+                        'ene-2026': '2da bandera (15 enero al 30 junio)'
+                    },
+                    clase: 'rojo-span',
+                    colspan: {
+                        'ago-2025': 5, // agosto a diciembre
+                        'ene-2026': 6 // enero a junio
+                    }
+                },
+                {
+                    descripcion: 'Comunicación mantenimiento',
+                    fechas: {
+                        'ago-2025': 16,
+                        'oct-2025': 18,
+                        'ene-2026': 13,
+                        'mar-2026': 17,
+                        'may-2026': 12
+                    }
+                },
+                {
+                    descripcion: 'Comunicación recordatorios',
+                    fechas: {
+                        'nov-2025': 24,
+                        'jun-2026': 23
+                    }
+                },
+                {
+                    descripcion: 'Comunicación contenido',
+                    fechas: {
+                        'nov-2025': 14,
+                        'feb-2026': 16,
+                        'abr-2026': 13
+                    }
+                },
+                {
+                    descripcion: 'Comunicación corte 1ra bandera',
+                    fechas: {
+                        'dic-2025': 31
+                    }
+                },
+                {
+                    descripcion: 'Calificación resultados',
+                    fechas: {
+                        'ene-2026': '2 al 16',
+                        'jul-2026': '1 al 17'
+                    },
+                    clase: 'rojo'
+                },
+                {
+                    descripcion: 'Comunicación resultados preliminares',
+                    fechas: {
+                        'ene-2026': 20
+                    }
+                },
+                {
+                    descripcion: 'Comunicación cierre actividad',
+                    fechas: {
+                        'jun-2026': 30
+                    }
+                },
+                {
+                    descripcion: 'Invitación evento premiación',
+                    fechas: {
+                        'jul-2026': 21
+                    }
+                },
+                {
+                    descripcion: 'Evento de premiación',
+                    fechas: {
+                        'ago-2026': 10
+                    },
+                    clase: 'azul'
+                },
+                {
+                    descripcion: 'Comunicación ganadores',
+                    fechas: {
+                        'ago-2026': 10
+                    },
+                    clase: 'azul'
+                }
+            ];
 
-                calendar.render();
+            // Función para generar la tabla dinámicamente
+            function generarTablaCronograma() {
+                const tabla = document.getElementById('cronograma-table');
+                const tbody = tabla.querySelector('tbody');
+
+                cronogramaData.forEach(item => {
+                    const fila = document.createElement('tr');
+
+                    // Celda de descripción
+                    const celdaDesc = document.createElement('td');
+                    celdaDesc.textContent = item.descripcion;
+                    celdaDesc.className = 'descripcion-cell';
+                    fila.appendChild(celdaDesc);
+
+                    // Celdas de meses
+                    const meses = ['jul-2025', 'ago-2025', 'sep-2025', 'oct-2025', 'nov-2025', 'dic-2025',
+                        'ene-2026', 'feb-2026', 'mar-2026', 'abr-2026', 'may-2026', 'jun-2026', 'jul-2026',
+                        'ago-2026'
+                    ];
+
+                    let skipCells = 0;
+
+                    meses.forEach(mes => {
+                        if (skipCells > 0) {
+                            skipCells--;
+                            return;
+                        }
+
+                        const celda = document.createElement('td');
+
+                        if (item.fechas[mes]) {
+                            celda.textContent = item.fechas[mes];
+
+                            if (item.clase) {
+                                celda.className = item.clase;
+                            }
+
+                            if (item.colspan && item.colspan[mes]) {
+                                celda.colSpan = item.colspan[mes];
+                                skipCells = item.colspan[mes] - 1;
+                            }
+                        }
+
+                        fila.appendChild(celda);
+                    });
+
+                    tbody.appendChild(fila);
+                });
+            }
+
+            // Ejecutar cuando el DOM esté listo
+            document.addEventListener('DOMContentLoaded', function() {
+                generarTablaCronograma();
             });
         </script>
     </head>
@@ -143,25 +189,44 @@
                 <i class="fa fa-arrow-left" id="icono-regresar" aria-hidden="true"></i> Regresar
             </a> --}}
             <div class="cronograma-info">
-                <div class="cronograma-left-container">
-                    <div id='calendar'></div>
-
-                </div>
-
-                <div class="cronograma-right-container">
+                <div class="cronograma-top-container">
                     <h2>Cronograma</h2>
-                    <ul class="eventos-importantes">
-                        <li>Evento virtual: 1 de julio</li>
-                        <li>Inicio: 1ra semana julio</li>
-                        <li>Período evaluación</li>
-                        <li>1er trimestre: 1 de julio al</li>
-                        <li>19 de septiembre</li>
-                    </ul>
+                    <p>• Período de evaluación: 11 meses (1 de agosto 2025 - 30 de junio 2026) •</p>
+                </div>
+                <div class="cronograma-calendar-container">
+                    <div class="cronograma-table-container">
+                        <table id="cronograma-table" class="cronograma-table">
+                            <thead>
+                                <tr>
+                                    <th rowspan="2" class="descripcion-header">Descripción</th>
+                                    <th colspan="6" class="year-header">2025</th>
+                                    <th colspan="8" class="year-header">2026</th>
+                                </tr>
+                                <tr>
+                                    <th class="month-header">Jul</th>
+                                    <th class="month-header">Ago</th>
+                                    <th class="month-header">Sep</th>
+                                    <th class="month-header">Oct</th>
+                                    <th class="month-header">Nov</th>
+                                    <th class="month-header">Dic</th>
+                                    <th class="month-header">Ene</th>
+                                    <th class="month-header">Feb</th>
+                                    <th class="month-header">Mar</th>
+                                    <th class="month-header">Abr</th>
+                                    <th class="month-header">May</th>
+                                    <th class="month-header">Jun</th>
+                                    <th class="month-header">Jul</th>
+                                    <th class="month-header">Ago</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Las filas se generarán dinámicamente con JavaScript -->
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
-            <div class="footer-component">
-                {{-- Footer info --}}
-            </div>
+            <livewire:footer-component />
 
         </div>
     </body>
