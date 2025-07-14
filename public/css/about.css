@@ -10,33 +10,45 @@
 
 .about-info {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     width: 60%;
-    height: 500px;
+    height: 600px;
     gap: 25px;
-    padding: 20px;
-    background: linear-gradient(to right, rgba(255,255,255,0.25) 0%, rgba(255,255,255,0.85) 100%);
+    padding: 50px;
+    background-image: url('../assets/quienes-somos-fondo.png');
+    background-size: cover;
     border-radius: 10px;
-    box-shadow: 0 4px 24px rgba(0,0,0,0.10);
     position: relative;
     overflow: hidden;
 }
 
-/* Línea inferior */
-.about-info::after {
-    content: "";
-    display: block;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 7px;
-    background: #e6e6e6;
+.about-tabs {
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 18px;
+    width: 50%;
 }
 
 
-.about-left-container {
+.about-tab {
+    padding: 8px 18px;
+    width: 100%;
+    border-radius: 6px;
+    border: none;
+    background: #003E71;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.about-tab.active {
+    background: #1a357a;
+}
+
+.about-content {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -45,34 +57,226 @@
     height: 100%;
 }
 
-.about-left-container img {
-    width: 100%;
-    height: auto;
-    margin-bottom: 20px;
-}
-
-.about-right-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 50%;
-    height: 100%;
-}
-
-.about-container h1 {
-    font-size: 2.5rem;
-    color: #003E71;
+.about-content h2 {
+    font-size: 2rem;
+    color: #fff;
     margin-bottom: 20px;
     text-transform: uppercase;
 }
 
-.about-container p {
-    font-size: 1.2rem;
-    color: #000;
+.about-content p {
+    font-size: 1rem;
+    color: #fff;
     line-height: 1.6;
     font-family: 'Emprint Regular', Arial, sans-serif;
     font-weight: 400;
     text-align: justify;
     margin-bottom: 20px;
+}
+
+.criterio-btn {
+    padding: 10px 20px;
+    background-color: #003E71;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 20px;
+}
+
+
+/* Criterio */
+
+
+.about-content#about-criterio {
+    align-items: flex-start;
+    width: 100% !important;
+    padding: 0;
+}
+
+.criterio-productos {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-direction: row;
+    margin-bottom: 10px;
+}
+
+.about-content#about-criterio h2 {
+    font-size: 2.2rem;
+    color: #fff;
+    font-weight: bold;
+    margin-bottom: 8px;
+    text-transform: none;
+    letter-spacing: 0.5px;
+}
+.about-content#about-criterio p {
+    color: #fff;
+    font-size: 1.1rem;
+    margin-bottom: 18px;
+    text-align: left;
+    font-family: 'Emprint Regular', Arial, sans-serif;
+}
+.about-content#about-criterio h3 {
+    color: #fff;
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin: 18px 0 10px 0;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.criterio-productos-list {
+    width: 100%;
+    background: rgba(7, 20, 99, 0.61); 
+    border-radius: 0 0 8px 8px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0;
+    margin-bottom: 0;
+    padding: 24px 18px 18px 18px;
+    box-sizing: border-box;
+    min-height: 140px;
+}
+.criterio-productos-list ul {
+    flex: 1;
+    min-width: 180px;
+    color: #fff;
+    list-style: disc inside;
+    font-size: 1.05rem;
+    margin: 0 0 0 0;
+    padding: 0 18px 0 18px;
+}
+.criterio-btn {
+    padding: 10px 24px 10px 24px;
+    background-color: #003E71;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.08rem;
+    margin-top: 24px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    transition: background 0.2s;
+}
+.criterio-btn:hover {
+    background: #003E71;
+}
+.criterio-btn .criterio-icon {
+    width: 28px;
+    height: 28px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+
+/* --- KPIs Table Custom Styles --- */
+.about-content#about-kpis {
+    align-items: center;
+    width: 100% !important;
+}
+
+.kpi-header-row {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    width: 85%;
+}
+.about-content#about-kpis h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #fff;
+    margin: 0 24px 0 0;
+    letter-spacing: 0.5px;
+    text-transform: none;
+}
+.about-content#about-kpis p {
+    color: #fff;
+    font-size: 1.15rem;
+    line-height: 1.5;
+    margin: 0;
+    max-width: 700px;
+    text-align: left;
+    font-family: 'Emprint Regular', Arial, sans-serif;
+}
+.kpi-table-container {
+    width: 100%;
+    max-width: 900px;
+    background: none;
+    box-shadow: none;
+}
+.kpi-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    background: #fff;
+    border-radius: 0 0 8px 8px;
+    overflow: hidden;
+    font-family: 'Emprint Regular', Arial, sans-serif;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    border: 2px solid #173a7a;
+}
+.kpi-table th {
+    background: #173a7a;
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: bold;
+    padding: 12px 14px;
+    text-align: left;
+    border-right: 2px solid #fff;
+    border-bottom: 2px solid #173a7a;
+    letter-spacing: 0.5px;
+}
+.kpi-table th:last-child {
+    border-right: none;
+    text-align: center;
+}
+.kpi-table td {
+    font-size: 1.05rem;
+    color: #222;
+    padding: 12px 14px;
+    border-bottom: 2px solid #d1d1d1;
+    vertical-align: top;
+    font-family: 'Emprint Regular', Arial, sans-serif;
+}
+.kpi-table tr:last-child td {
+    border-bottom: none;
+}
+.kpi-table tbody tr:nth-child(even) td {
+    background: #f5f5f5;
+}
+.kpi-table tbody tr:nth-child(odd) td {
+    background: #eaeaea;
+}
+.kpi-table td:first-child {
+    font-weight: bold;
+    width: 220px;
+    background: #ededed;
+    font-size: 1.05rem;
+}
+.kpi-table td:last-child {
+    text-align: center;
+    font-weight: bold;
+    color: #173a7a;
+    font-size: 1.1rem;
+    background: #ededed;
+    width: 80px;
+}
+.kpi-table tfoot td {
+    background: #173a7a !important;
+    color: #fff !important;
+    font-weight: bold;
+    border-bottom: none;
+    font-size: 1.1rem;
+    text-align: right;
+    padding-right: 18px;
+}
+.kpi-table tfoot td:last-child {
+    text-align: center;
+    padding-right: 0;
 }
