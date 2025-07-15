@@ -22,6 +22,7 @@
                 },
                 {
                     descripcion: 'Evento de lanzamiento',
+                    clase: 'azul',
                     fechas: {
                         'jul-2025': 21
                     }
@@ -54,8 +55,8 @@
                 {
                     descripcion: 'Comunicación mantenimiento',
                     fechas: {
-                        'ago-2025': 16,
-                        'oct-2025': 18,
+                        'sep-2025': 16,
+                        'nov-2025': 18,
                         'ene-2026': 13,
                         'mar-2026': 17,
                         'may-2026': 12
@@ -64,7 +65,7 @@
                 {
                     descripcion: 'Comunicación recordatorios',
                     fechas: {
-                        'nov-2025': 24,
+                        'dic-2025': 24,
                         'jun-2026': 23
                     }
                 },
@@ -119,8 +120,7 @@
                     descripcion: 'Comunicación ganadores',
                     fechas: {
                         'ago-2026': 10
-                    },
-                    clase: 'azul'
+                    }
                 }
             ];
 
