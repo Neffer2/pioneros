@@ -12,7 +12,7 @@
         <div class="menu-grid">
             <div class="menu-top">
                 <a href="{{ route('about') }}" class="menu-item">
-                    <img src="{{ asset('assets/menu-info.png') }}" alt="¿Qué es P1ONEROS?">
+                    <img src="{{ asset('assets/menu-info.png') }}" alt="¿Qué es P1oneros?">
                     <span>¿Qué es P1oneros?</span>
                 </a>
                 <a href="{{ route('cronograma') }}" class="menu-item">

@@ -281,3 +281,227 @@
     text-align: center;
     padding-right: 0;
 }
+
+/* Media Queries para portátiles */
+@media screen and (max-width: 1600px) {
+    .about-info {
+        width: 60%;
+        height: 550px;
+    }
+
+    .about-tabs {
+        width: 65%;
+    }
+
+    .about-content h2 {
+        font-size: 2.3rem;
+    }
+
+    .kpi-table-container {
+        max-width: 800px;
+    }
+}
+
+@media screen and (max-width: 1366px) {
+    .about-info {
+        width: 70%;
+        height: 450px;
+        padding: 40px;
+        gap: 20px;
+    }
+
+    .about-tabs {
+        width: 70%;
+    }
+
+    .about-content {
+        width: 50%;
+    }
+
+    .about-content h2 {
+        font-size: 2.1rem;
+        margin-bottom: 15px;
+    }
+
+    .about-content p {
+        font-size: 1rem;
+        margin-bottom: 15px;
+    }
+
+    /* Ajustes para la sección de criterios */
+    .about-content#about-criterio h2 {
+        font-size: 2rem;
+    }
+
+    .about-content#about-criterio h3 {
+        font-size: 1.3rem;
+    }
+
+    .criterio-productos-list {
+        padding: 20px 15px 15px 15px;
+        min-height: 130px;
+    }
+
+    .criterio-productos-list ul {
+        min-width: 160px;
+        font-size: 1rem;
+        padding: 0 15px;
+    }
+
+    /* Ajustes para la tabla KPI */
+    .kpi-header-row {
+        width: 95%;
+    }
+
+    .kpi-table-container {
+        width: 100%;
+        overflow-x: auto;
+        padding-bottom: 15px;
+    }
+
+    .kpi-table {
+        min-width: 800px; /* Ancho mínimo para mantener la legibilidad */
+    }
+
+    .kpi-table th, 
+    .kpi-table td {
+        font-size: 1.1rem; /* Mantenemos el tamaño original */
+        white-space: nowrap; /* Evita que el texto se rompa */
+    }
+
+    .kpi-table td:first-child {
+        width: 220px;
+        position: sticky;
+        left: 0;
+        background: #ededed;
+    }
+
+    .kpi-table td:last-child {
+        width: 80px;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .about-info {
+        width: 85%;
+        height: 480px;
+        padding: 35px;
+    }
+
+    .about-tabs {
+        width: 80%;
+    }
+
+    .about-content {
+        width: 55%;
+    }
+
+    .about-content h2 {
+        font-size: 2rem;
+    }
+
+    .criterio-productos-list {
+        min-height: 120px;
+    }
+
+    .kpi-table-container {
+        width: 100%;
+    }
+
+    .kpi-table {
+        min-width: 800px;
+    }
+
+    .about-content#about-kpis h2 {
+        font-size: 2.2rem;
+    }
+
+    /* Mantenemos la columna de nombre fija al hacer scroll */
+    .kpi-table td:first-child {
+        position: sticky;
+        left: 0;
+        background: #ededed;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .about-info {
+        width: 90%;
+        height: 450px;
+        padding: 30px;
+        gap: 15px;
+    }
+
+    .about-tabs {
+        width: 85%;
+        gap: 4px;
+    }
+
+    .about-tab {
+        padding: 8px 15px;
+        font-size: 0.95rem;
+    }
+
+    .about-content {
+        width: 60%;
+    }
+
+    .about-content h2 {
+        font-size: 1.8rem;
+        margin-bottom: 12px;
+    }
+
+    .about-content p {
+        font-size: 0.95rem;
+        line-height: 1.4;
+    }
+
+    /* Ajustes para la sección de criterios */
+    .about-content#about-criterio h2 {
+        font-size: 1.8rem;
+    }
+
+    .criterio-productos-list {
+        padding: 15px 12px;
+    }
+
+    .criterio-productos-list ul {
+        min-width: 150px;
+        font-size: 0.95rem;
+    }
+
+    /* Ajustes para la tabla KPI */
+    .kpi-header-row {
+        width: 100%;
+    }
+
+    .kpi-table {
+        min-width: 800px;
+    }
+
+    /* Mantenemos la columna de nombre fija */
+    .kpi-table td:first-child {
+        position: sticky;
+        left: 0;
+        background: #ededed;
+    }
+
+    /* Aseguramos que la última columna tenga fondo */
+    .kpi-table td:last-child {
+        background: #ededed;
+    }
+
+    /* Ajuste para el scroll en móvil */
+    .kpi-table-container::-webkit-scrollbar {
+        height: 8px;
+    }
+
+    .kpi-table-container::-webkit-scrollbar-track {
+        background: #f1f1f1;
+    }
+
+    .kpi-table-container::-webkit-scrollbar-thumb {
+        background: #888;
+        border-radius: 4px;
+    }
+}

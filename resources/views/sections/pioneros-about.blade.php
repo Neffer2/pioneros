@@ -14,7 +14,7 @@
 
         <div class="about-info">
             <div class="about-content" id="about-general">
-                <h2>¿Qué es P1ONEROS?</h2>
+                <h2>¿Qué es P1oneros?</h2>
                 <p>
                     Una iniciativa de Mobil Industria para reconocer el trabajo, las acciones y los resultados obtenidos por
                     los Agentes Comerciales con la venta y uso de productos de la categoría Flagship en los equipos y/o
