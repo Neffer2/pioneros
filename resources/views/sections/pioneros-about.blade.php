@@ -117,7 +117,7 @@
                 <div class="kpi-header-row">
                     <h2>KPIs</h2>
                     <p>
-                        A través de un sistema de puntuación evaluaremos el desempeño de los AC durante la actividad, clasificando sus resultados de mayor a menor, a través de 6 rangos (1 para el resultado general y 5 por indicador clave o KPI):
+                        A través de un sistema de puntuación evaluaremos el desempeño de los AC durante la actividad, clasificando sus resultados de mayor a menor, a través de 6 ranking (1 para el resultado general y 5 por indicador clave o KPI):
                     </p>
                 </div>
                 <div class="kpi-table-container">
