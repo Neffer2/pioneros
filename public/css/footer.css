@@ -10,3 +10,34 @@
     bottom: 0;
     left: 0;
 }   
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 95%;
+    margin: 0 auto;
+}
+
+.footer-content p {
+    margin: 0;
+    font-family: 'Emprint Light', sans-serif;
+    font-weight: 500;
+}
+
+.contact-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #fff;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+}
+
+.contact-link:hover {
+    opacity: 0.8;
+}
+
+.contact-link i {
+    font-size: 1.1rem;
+}

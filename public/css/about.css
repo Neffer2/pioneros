@@ -28,8 +28,8 @@
     gap: 5px;
     justify-content: center;
     align-items: center;
-    margin-bottom: 18px;
-    width: 50%;
+    width: 55%;
+    margin-bottom: 5px;
 }
 
 
@@ -58,17 +58,17 @@
 }
 
 .about-content h2 {
-    font-size: 2rem;
+    font-size: 2.5rem;
     color: #fff;
     margin-bottom: 20px;
-    text-transform: uppercase;
+    text-transform: capitalize;
 }
 
 .about-content p {
-    font-size: 1rem;
+    font-size: 1.1rem;
     color: #fff;
-    line-height: 1.6;
-    font-family: 'Emprint Regular', Arial, sans-serif;
+    line-height: 1.1;
+    font-family: 'Emprint light', Arial, sans-serif;
     font-weight: 400;
     text-align: justify;
     margin-bottom: 20px;

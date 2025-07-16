@@ -6,23 +6,23 @@
             [
                 'key' => 'total_premios',
                 'label' => 'Total premios',
-                'active' => true
+                'active' => true,
             ],
             [
                 'key' => 'primer_lugar',
                 'label' => '1er lugar',
-                'active' => false
+                'active' => false,
             ],
             [
-                'key' => 'segundo_lugar', 
+                'key' => 'segundo_lugar',
                 'label' => '2do lugar',
-                'active' => false
+                'active' => false,
             ],
             [
                 'key' => 'tercer_lugar',
-                'label' => '3er lugar', 
-                'active' => false
-            ]
+                'label' => '3er lugar',
+                'active' => false,
+            ],
         ];
     @endphp
 
@@ -46,100 +46,93 @@
                 <div class="premios-content-total">
                     <div class="premios-header">
                         <div class="premio-mayor">
-                            <div class="trophy-icon">
-                                <i class="fas fa-trophy"></i>
-                            </div>
+
                             <div class="premio-info">
-                                <h2>1 Premio mayor</h2>
-                                <h3>23 Premios aspiracionales</h3>
+                                <div class="trophy-icon">
+                                    <img src="{{ asset('assets/icono-trofeo.png') }}" alt="">
+                                </div>
+                                <div class="premio-info-text">
+                                    <h2>1 Premio mayor</h2>
+                                    <h3>23 Premios aspiracionales</h3>
+                                </div>
+                            </div>
+                            <div class="premios-img">
+                                <img src="{{ asset('assets/puestos-uno.png') }}" alt="Premios Totales">
+                            </div>
+                            <div class="premios-img">
+                                <img src="{{ asset('assets/puestos-dos.png') }}" alt="Premios Totales">
+                            </div>
+                            <div class="premio-info-bottom">
+                                <p> Más de $200 millones <span class="premios-info-span">de pesos en premios</span></p>
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="premios-details">
-                        <div class="lugar-premio primer-lugar">
-                            <div class="medal-icon">
-                                <i class="fas fa-medal"></i>
-                            </div>
-                            <div class="lugar-info">
-                                <span class="lugar-title">Ag. Comercial<br>1er Lugar</span>
-                                <div class="premio-items">
-                                    <span class="premio-desc">Placa conmemorativa + Merch oficial + Experiencia Motorsport (Todo incluido)</span>
-                                    <ul class="premio-list">
-                                        <li>Director Comercial</li>
-                                        <li>Asesor Comercial B2B</li>
-                                        <li>Ingeniero de lubricación</li>
-                                        <li><strong>+ 1 ingeniero ventas OT</strong></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="motorsport-logo">
-                                <span>HOMESTEAD MIAMI SPEEDWAY</span>
-                            </div>
-                        </div>
-                        
-                        <div class="lugar-premio segundo-lugar">
-                            <div class="medal-icon">
-                                <i class="fas fa-medal"></i>
-                            </div>
-                            <div class="lugar-info">
-                                <span class="lugar-title">Ag. Comercial<br>2do Lugar</span>
-                                <div class="premio-items">
-                                    <span class="premio-desc">Premios por Agente Comercial</span>
-                                    <ul class="premio-list">
-                                        <li>Asesor Comercial B2B</li>
-                                        <li>Ingeniero Lubricación</li>
-                                    </ul>
-                                    <div class="premio-icons">
-                                        <span>🏆 + 🎁 + 🏆 + 📜 + 💳</span>
-                                        <span class="icon-labels">Placa  Equipos  Merch oficial  Cursos  Bonos</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="number-badge segundo">2</div>
-                        </div>
-                        
-                        <div class="lugar-premio tercer-lugar">
-                            <div class="medal-icon">
-                                <i class="fas fa-medal"></i>
-                            </div>
-                            <div class="lugar-info">
-                                <span class="lugar-title">Ag. Comercial<br>3er Lugar</span>
-                                <div class="premio-items">
-                                    <span class="premio-desc">+ Agente comercial</span>
-                                </div>
-                            </div>
-                            <div class="number-badge tercero">3</div>
-                        </div>
-                    </div>
-                    
-                    <div class="premios-total">
-                        <h2>Más de $220 millones<br>de pesos en premios</h2>
+
                     </div>
                 </div>
             </div>
 
             {{-- Vista 1er Lugar --}}
             <div class="premios-section" id="section-primer_lugar" style="display: none;">
+                <h2>Experiencia Motorsport</h2>
                 <div class="premios-content">
-                    <h2>Primer Lugar</h2>
-                    <p>Contenido específico del primer lugar...</p>
+                    <img src="{{ asset('assets/pieza-primer-puesto.png') }}" alt="Primer puesto">
                 </div>
             </div>
 
             {{-- Vista 2do Lugar --}}
             <div class="premios-section" id="section-segundo_lugar" style="display: none;">
-                <div class="premios-content">
-                    <h2>Segundo Lugar</h2>
-                    <p>Contenido específico del segundo lugar...</p>
+                <div class="carousel-wrapper">
+                    <button class="carousel-arrow prev" id="prev2">❮</button>
+                    <div class="carousel-content">
+                        <h2 id="title2">Agente comercial</h2>
+                        <div class="premios-content">
+                            <div class="carousel-slides" id="slides2">
+                                <div class="slide active">
+                                    <img src="{{ asset('assets/pieza-segundo-puesto-agente-comercial.png') }}"
+                                        alt="Agente Comercial">
+                                </div>
+                                <div class="slide">
+                                    <img src="{{ asset('assets/pieza-segundo-puesto-asesor-comercial.png') }}"
+                                        alt="Asesor Comercial B2B">
+                                </div>
+                                <div class="slide">
+                                    <img src="{{ asset('assets/pieza-segundo-puesto-ingeniero.png') }}"
+                                        alt="Ingeniero de Lubricación">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-arrow next" id="next2">❯</button>
                 </div>
             </div>
 
             {{-- Vista 3er Lugar --}}
             <div class="premios-section" id="section-tercer_lugar" style="display: none;">
-                <div class="premios-content">
-                    <h2>Tercer Lugar</h2>
-                    <p>Contenido específico del tercer lugar...</p>
+                <div class="carousel-wrapper">
+                    <button class="carousel-arrow prev" id="prev3">❮</button>
+                    <div class="carousel-content">
+                        <h2 id="title3">Agente comercial</h2>
+                        <div class="premios-content">
+                            <div class="carousel-slides" id="slides3">
+                                <div class="slide active">
+                                    <img src="{{ asset('assets/pieza-tercer-puesto-agente-comercial.png') }}"
+                                        alt="Agente Comercial">
+                                </div>
+                                <div class="slide">
+                                    <img src="{{ asset('assets/pieza-tercer-puesto-asesor-comercial.png') }}"
+                                        alt="Asesor Comercial B2B">
+                                </div>
+                                <div class="slide">
+                                    <img src="{{ asset('assets/pieza-tercer-puesto-ingeniero.png') }}"
+                                        alt="Ingeniero de Lubricación">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-arrow next" id="next3">❯</button>
                 </div>
             </div>
         </div>
@@ -163,8 +156,53 @@
                 this.style.color = '#fff';
             });
         });
-        
+
         // Inicializar el primer botón como activo
         document.getElementById('active-premios-btn').style.background = '#3b5ca8';
+
+        // Función para manejar los carruseles
+        function setupCarousel(slideId, prevId, nextId, titleId) {
+            const slides = document.querySelector(`#${slideId}`);
+            const prevButton = document.querySelector(`#${prevId}`);
+            const nextButton = document.querySelector(`#${nextId}`);
+            const titleElement = document.querySelector(`#${titleId}`);
+
+            if (!slides || !prevButton || !nextButton || !titleElement) return;
+
+            const titles = [
+                'Agente comercial',
+                'Asesor comercial B2B',
+                'Ingeniero de lubricación'
+            ];
+
+            let currentSlide = 0;
+
+            function updateSlides() {
+                const allSlides = slides.querySelectorAll('.slide');
+                allSlides.forEach((slide, index) => {
+                    slide.classList.remove('active');
+                    if (index === currentSlide) {
+                        slide.classList.add('active');
+                    }
+                });
+                titleElement.textContent = titles[currentSlide];
+            }
+
+            prevButton.addEventListener('click', () => {
+                currentSlide = (currentSlide - 1 + 3) % 3;
+                updateSlides();
+            });
+
+            nextButton.addEventListener('click', () => {
+                currentSlide = (currentSlide + 1) % 3;
+                updateSlides();
+            });
+        }
+
+        // Inicializar los carruseles
+        setupCarousel('slides2', 'prev2', 'next2', 'title2');
+        setupCarousel('slides3', 'prev3', 'next3', 'title3');
     </script>
+
+
 @endsection
