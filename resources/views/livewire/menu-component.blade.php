@@ -17,7 +17,7 @@
             
             <nav class="navbar-nav">
                 <a href="{{ route('dashboard') }}" class="nav-link">Inicio</a>
-                <a href="{{ route('about') }}" class="nav-link">¿Qué es P1ONEROS?</a>
+                <a href="{{ route('about') }}" class="nav-link">¿Qué es P1oneros?</a>
                 <a href="{{ route('cronograma') }}" class="nav-link">Cronograma</a>
                 <a href="{{ route('ranking') }}" class="nav-link">Ranking</a>
                 <a href="{{ route('premios') }}" class="nav-link">Premios</a>
