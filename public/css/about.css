@@ -29,13 +29,14 @@
     gap: 5px;
     justify-content: center;
     align-items: center;
-    width: 55%;
+    width: 60%;
     margin-bottom: 5px;
 }
 
 
 .about-tab {
     padding: 8px 18px;
+    min-height:  55px;
     width: 100%;
     border-radius: 6px;
     border: none;
@@ -290,7 +291,7 @@
     }
 
     .about-tabs {
-        width: 65%;
+        width: 60%;
     }
 
     .about-content h2 {
@@ -311,7 +312,7 @@
     }
 
     .about-tabs {
-        width: 70%;
+        width: 60%;
     }
 
     .about-content {
@@ -389,7 +390,7 @@
     }
 
     .about-tabs {
-        width: 80%;
+        width: 60%;
     }
 
     .about-content {
@@ -433,7 +434,7 @@
     }
 
     .about-tabs {
-        width: 85%;
+        width: 60%;
         gap: 4px;
     }
 
