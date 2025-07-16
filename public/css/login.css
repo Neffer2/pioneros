@@ -5,6 +5,8 @@
     justify-content: center;
     height: 100vh;
     background-image: url('../assets/fondo-login.png');
+    background-size: cover;
+    background-position: center;
 }
 
 .logo-login-pioneros {
