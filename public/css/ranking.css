@@ -107,7 +107,7 @@
 }
 
 .ranking-table tr {
-    background: rgba(7, 51, 87, 0.719);
+    background: rgba(7, 51, 87, 1);
     /* Fondo translúcido azul */
     border-radius: 8px;
 }

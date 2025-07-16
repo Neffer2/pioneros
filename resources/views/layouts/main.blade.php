@@ -22,48 +22,85 @@
 
 <body>
     @yield('content')
-    {{-- @livewire('menu-component') --}}
+    @livewire('menu-component')
 </body>
 <script>
     document.addEventListener('DOMContentLoaded', function() {
-
-
+        console.log('Document loaded and ready');
+        
         const navbarToggle = document.querySelector('.navbar-toggle');
+        const navbarClose = document.querySelector('.navbar-close');
         const navbarPanel = document.querySelector('.navbar-panel');
         const navbarIcon = document.querySelector('.navbar-icon');
 
-        if (!navbarToggle) {
-            return;
-        }
+        // Toggle del menú con hamburguesa
+        navbarToggle.addEventListener('click', function(e) {
+            e.stopPropagation();
+            openMenu();
+        });
 
-        navbarToggle.addEventListener('click', function() {
-            navbarPanel.classList.toggle('active');
-            navbarIcon.classList.toggle('active');
+        // Cerrar menú con botón X
+        navbarClose.addEventListener('click', function(e) {
+            e.stopPropagation();
+            closeMenu();
+        });
 
-            const spans = navbarIcon.querySelectorAll('span');
-            if (navbarPanel.classList.contains('active')) {
-                spans[0].style.transform = 'rotate(45deg) translate(8px, 8px)';
-                spans[1].style.opacity = '0';
-                spans[2].style.transform = 'rotate(-45deg) translate(7px, -7px)';
-            } else {
-                spans[0].style.transform = 'none';
-                spans[1].style.opacity = '1';
-                spans[2].style.transform = 'none';
+        // Prevenir que el panel se cierre al hacer clic dentro de él
+        navbarPanel.addEventListener('click', function(e) {
+            e.stopPropagation();
+        });
+
+        // Cerrar menú al hacer clic fuera de él
+        document.addEventListener('click', function(e) {
+            if (navbarPanel.classList.contains('active') && 
+                !navbarPanel.contains(e.target) && 
+                !navbarToggle.contains(e.target)) {
+                closeMenu();
             }
         });
 
-        // Solo en móvil: Cerrar menú al hacer clic fuera
-        if (window.innerWidth <= 768) {
-            document.addEventListener('click', function(event) {
-                if (!navbarPanel.contains(event.target) && !navbarToggle.contains(event.target)) {
-                    navbarPanel.classList.remove('active');
-                    const spans = navbarIcon.querySelectorAll('span');
-                    spans[0].style.transform = 'none';
-                    spans[1].style.opacity = '1';
-                    spans[2].style.transform = 'none';
+        // Función para abrir menú
+        function openMenu() {
+            navbarPanel.classList.add('active');
+            navbarToggle.classList.add('hidden'); // Ocultar hamburguesa
+            document.body.style.overflow = 'hidden'; // Prevenir scroll
+        }
+
+        // Función para cerrar menú
+        function closeMenu() {
+            navbarPanel.classList.remove('active');
+            navbarToggle.classList.remove('hidden'); // Mostrar hamburguesa
+            document.body.style.overflow = ''; // Restaurar scroll
+        }
+
+        // Cerrar menú con tecla Escape
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && navbarPanel.classList.contains('active')) {
+                closeMenu();
+            }
+        });
+
+        // Cerrar menú al hacer clic en un enlace (excepto si abre en nueva pestaña)
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                // Si no es un enlace que abre en nueva pestaña, cerrar menú
+                if (!this.hasAttribute('target')) {
+                    setTimeout(closeMenu, 100);
                 }
             });
+        });
+
+        // Responsive: Ajustar comportamiento según el tamaño de pantalla
+        function handleResize() {
+            if (window.innerWidth > 768) {
+                // En desktop, mantener el menú siempre visible si está abierto
+                if (navbarPanel.classList.contains('active')) {
+                    document.body.style.overflow = '';
+                }
+            }
         }
+
+        window.addEventListener('resize', handleResize);
     });
 </script>
 

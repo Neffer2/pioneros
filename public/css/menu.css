@@ -1,15 +1,32 @@
 .navbar-container {
     position: fixed;
     top: 0;
-    right: 0;
+    left: 0;
     z-index: 9999;
     height: 100vh;
     display: flex;
-    align-items: flex-start;
+    align-items: center;
 }
 
 .navbar-toggle {
-    display: none;
+    display: block;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 20px;
+    position: fixed;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1001;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.navbar-toggle.hidden {
+    opacity: 0;
+    visibility: hidden;
 }
 
 .navbar-icon {
@@ -28,16 +45,42 @@
     background-color: #fff;
     border-radius: 3px;
     transition: all 0.3s ease;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 .navbar-panel {
     position: fixed;
     top: 0;
-    right: 0;
+    left: -100%;
     width: 300px;
     height: 100vh;
-    background: linear-gradient(to bottom, rgba(128, 128, 128, 0.95), rgba(64, 64, 64, 0.95));
+    background: rgba(0, 62, 113, 0.9);
     padding: 60px 0;
+    transition: left 0.3s ease;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.navbar-panel.active {
+    left: 0;
+}
+
+.navbar-close {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    z-index: 1002;
+}
+
+.navbar-close:hover {
+    transform: rotate(90deg);
 }
 
 .navbar-nav {
@@ -52,49 +95,112 @@
     text-decoration: none;
     font-size: 1.2rem;
     padding: 15px 20px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     transition: all 0.3s ease;
-    text-align: right;
+    text-align: left;
+    border-radius: 8px;
+    margin-bottom: 5px;
+    font-weight: 600;
 }
 
 .nav-link:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-    padding-right: 30px;
+    background-color: rgba(255, 255, 255, 0.15);
+    padding-left: 30px;
+    transform: translateX(5px);
+    color: #f0f0f0;
 }
 
 .logout {
     margin-top: auto;
-    color: #fff;
+    color: #dc3545;
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: flex-start;
     gap: 10px;
+    background-color: rgba(220, 53, 69, 0.1);
+    border: 1px solid rgba(220, 53, 69, 0.3);
+    font-weight: 600;
+}
+
+.logout:hover {
+    background-color: rgba(220, 53, 69, 0.2);
+    border-color: rgba(220, 53, 69, 0.5);
+    color: #b02a37;
 }
 
 .logout i {
     font-size: 1.2rem;
 }
 
+/* Responsive styles */
 @media (max-width: 768px) {
     .navbar-panel {
-        right: -100%;
-        width: 100%;
-        transition: right 0.3s ease;
-    }
-
-    .navbar-panel.active {
-        right: 0;
+        width: 80%;
+        max-width: 320px;
     }
 
     .navbar-toggle {
-        display: block;
-        background: transparent;
-        border: none;
-        cursor: pointer;
-        padding: 20px;
-        position: fixed;
-        right: 20px;
-        top: 20px;
-        z-index: 1001;
+        left: 15px;
+    }
+
+    .navbar-close {
+        top: 15px;
+        left: 15px;
+        font-size: 1.3rem;
+    }
+
+    .nav-link {
+        font-size: 1.1rem;
+        padding: 12px 18px;
     }
 }
+
+@media (max-width: 480px) {
+    .navbar-panel {
+        width: 90%;
+        max-width: 280px;
+    }
+
+    .navbar-toggle {
+        left: 10px;
+        padding: 15px;
+    }
+
+    .navbar-close {
+        top: 10px;
+        left: 10px;
+        font-size: 1.2rem;
+    }
+
+    .navbar-icon {
+        width: 25px;
+        height: 20px;
+    }
+
+    .navbar-icon span {
+        height: 2px;
+    }
+
+    .nav-link {
+        font-size: 1rem;
+        padding: 10px 15px;
+    }
+
+    .navbar-nav {
+        padding: 15px;
+    }
+}
+
+/* Animación para el icono cuando está activo */
+.navbar-icon.active span:nth-child(1) {
+    transform: rotate(45deg) translate(8px, 8px);
+}
+
+.navbar-icon.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.navbar-icon.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+}
+
