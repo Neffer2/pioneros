@@ -261,3 +261,105 @@ h2 {
     display: block;
 }
 
+/* Media queries para portátiles */
+@media screen and (max-width: 1366px) {
+    .premios-info {
+        width: 70%;
+        height: 450px;
+    }
+
+    .premios-switcher {
+        width: 70%;
+    }
+
+    .premios-btn {
+        min-height: 50px;
+    }
+
+    .premios-section {
+        padding: 30px;
+    }
+
+    #section-primer_lugar h2,
+    #section-segundo_lugar h2,
+    #section-tercer_lugar h2 {
+        font-size: 2rem;
+        margin-bottom: 15px;
+    }
+
+    .premio-info-text h2 {
+        font-size: 2.2rem;
+    }
+
+    .premio-info-text h3 {
+        font-size: 1.7rem;
+    }
+
+    .carousel-title {
+        font-size: 2rem;
+    }
+
+    .trophy-icon {
+        width: 80px;
+    }
+
+    .premio-info-bottom {
+        font-size: 1.8rem;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .premios-info {
+        width: 70%;
+        height: 450px;
+    }
+
+    .premios-switcher {
+        width: 70%;
+    }
+
+    .premios-btn {
+        padding: 6px 14px;
+        min-height: 45px;
+        font-size: 0.9rem;
+    }
+
+    .premios-section {
+        padding: 25px;
+    }
+
+    #section-primer_lugar h2,
+    #section-segundo_lugar h2,
+    #section-tercer_lugar h2 {
+        font-size: 1.8rem;
+        margin-bottom: 12px;
+    }
+
+    .premio-info-text h2 {
+        font-size: 2rem;
+    }
+
+    .premio-info-text h3 {
+        font-size: 1.5rem;
+    }
+
+    .carousel-title {
+        font-size: 1.8rem;
+        margin-bottom: 15px;
+    }
+
+    .trophy-icon {
+        width: 70px;
+    }
+
+    .premio-info-bottom {
+        font-size: 1.6rem;
+    }
+
+    .carousel-arrow {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+    }
+}
+

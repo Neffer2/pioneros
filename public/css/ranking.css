@@ -215,3 +215,86 @@
 .ranking-table-container::-webkit-scrollbar-thumb:hover {
     background: rgba(7, 51, 87, 0.8);
 }
+
+/* Media queries para portátiles */
+@media screen and (max-width: 1366px) {
+    .ranking-info {
+        width: 70%;
+        height: 450px;
+    }
+
+    .ranking-switcher {
+        width: 70%;
+    }
+
+    .ranking-right-container h4 {
+        font-size: 2rem;
+    }
+
+    .ranking-table td {
+        font-size: 1.4rem;
+        padding: 6px 14px;
+    }
+
+    .ranking-table td:nth-child(2) {
+        font-size: 1.2rem;
+        max-width: 200px;
+    }
+
+    .podium-number p:first-child {
+        font-size: 1rem;
+        max-width: 60px;
+    }
+
+    .podium-number p:nth-child(2) {
+        font-size: 1.6rem;
+    }
+
+    .ranking-table-container {
+        max-height: 380px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .ranking-info {
+        width: 70%;
+        height: 450px;
+    }
+
+    .ranking-switcher {
+        width: 70%;
+    }
+
+    .ranking-btn {
+        padding: 6px 14px;
+        min-height: 45px;
+        font-size: 0.9rem;
+    }
+
+    .ranking-right-container h4 {
+        font-size: 1.8rem;
+    }
+
+    .ranking-table td {
+        font-size: 1.2rem;
+        padding: 4px 10px;
+    }
+
+    .ranking-table td:nth-child(2) {
+        font-size: 1.1rem;
+        max-width: 180px;
+    }
+
+    .podium-number p:first-child {
+        font-size: 0.9rem;
+        max-width: 50px;
+    }
+
+    .podium-number p:nth-child(2) {
+        font-size: 1.4rem;
+    }
+
+    .ranking-table-container {
+        max-height: 320px;
+    }
+}
