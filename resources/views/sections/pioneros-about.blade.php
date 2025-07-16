@@ -10,6 +10,7 @@
             <button class="about-tab" data-tab="mecanica">Mecánica</button>
             <button class="about-tab" data-tab="productos">Productos</button>
             <button class="about-tab" data-tab="kpis">KPIs</button>
+            <button class="about-tab" data-tab="criterio">Criterio de desempate</button>
         </div>
 
         <div class="about-info">
@@ -58,7 +59,11 @@
                     lubricante (transmisiones, industrial, grasas, engranajes, hidráulico, aviación, etc.), formato de
                     empaque (tambor, balde, unidad, cuartos).
                 </p>
-                <button class="criterio-btn" id="btn-criterio">Criterio de desempate <span>&#8250;</span></button>
+                <button class="criterio-btn" id="btn-criterio">Productos <span>&#8250;</span></button>
+            </div>
+
+            <div class="about-content" id="about-productos-lista" style="display:none;">
+                <h1>Productos</h1>
             </div>
 
             <div class="about-content" id="about-criterio" style="display:none;">
@@ -175,15 +180,20 @@
                 document.getElementById('about-' + tab).style.display = 'flex';
             });
         });
-        // Botón para mostrar criterio de desempate
+        // Botón para mostrar lista de productos
         document.getElementById('btn-criterio').addEventListener('click', function() {
             document.querySelectorAll('.about-content').forEach(c => c.style.display = 'none');
-            document.getElementById('about-criterio').style.display = 'flex';
+            document.getElementById('about-productos-lista').style.display = 'flex';
         });
         // Botón para volver a productos participantes
         document.getElementById('btn-productos').addEventListener('click', function() {
+            // Cambiar la vista al contenido de productos
             document.querySelectorAll('.about-content').forEach(c => c.style.display = 'none');
             document.getElementById('about-productos').style.display = 'flex';
+            
+            // Actualizar el estado activo en los botones del menú
+            document.querySelectorAll('.about-tab').forEach(b => b.classList.remove('active'));
+            document.querySelector('.about-tab[data-tab="productos"]').classList.add('active');
         });
     </script>
 @endsection
