@@ -63,7 +63,105 @@
             </div>
 
             <div class="about-content" id="about-productos-lista" style="display:none;">
-                <h1>Productos</h1>
+                <div class="productos-header">
+                    <h2>Productos participantes</h2>
+                </div>
+                <div class="productos-container">
+                    <div class="productos-column">
+                        <ul>
+                            <li>Synturion 6</li>
+                            <li>Mobil Delvac 1 Transmission Fluid Mbt 75W-90</li>
+                            <li>Mobil Delvac 1 Transmission Fluid V30</li>
+                            <li>Mobil Delvac 1 Transmission Fluid 50</li>
+                            <li>Mobil Delvac 1 Gear Oil 80W-140</li>
+                            <li>Mobil Delvac 1 Gear Oil 75W-90</li>
+                            <li>Mobil Delvac 1 Atf</li>
+                            <li>Mobil Delvac 1 Le 5W30</li>
+                            <li>Pyrolube 830</li>
+                            <li>Mobiltemp Shc 32</li>
+                            <li>Mobiltemp Shc 100</li>
+                            <li>Mobilith Shc Pm 460</li>
+                            <li>Mobilith Shc 460</li>
+                            <li>Mobilith Shc 220</li>
+                            <li>Mobilith Shc 1500</li>
+                        </ul>
+                    </div>
+                    <div class="productos-column">
+                        <ul>
+                            <li>Mobilith Shc 100</li>
+                            <li>Mobilith Shc 007</li>
+                            <li>Mobil Shc Polyrex 462</li>
+                            <li>Mobil Shc Polyrex 222</li>
+                            <li>Mobil Shc Pm 220</li>
+                            <li>Mobilgear Shc Xmp 320</li>
+                            <li>Mobilgear Shc Xmp 460</li>
+                            <li>Mobil Shc Gear 6800</li>
+                            <li>Mobil Shc Gear 680</li>
+                            <li>Mobil Shc Gear 460M</li>
+                            <li>Mobil Shc Gear 3200</li>
+                            <li>Mobil Shc Gear 320</li>
+                            <li>Mobil Shc Gear 22M</li>
+                            <li>Mobil Shc Gear 220</li>
+                            <li>Mobil Shc Gear 1500</li>
+                        </ul>
+                    </div>
+                    <div class="productos-column">
+                        <ul>
+                            <li>Mobil Shc Cibus 68</li>
+                            <li>M-Shc Cibus 460</li>
+                            <li>Mobil Shc Cibus 46</li>
+                            <li>Mobil Shc Cibus 320</li>
+                            <li>Mobil Shc Cibus 32</li>
+                            <li>Mobil Shc Cibus 220</li>
+                            <li>M-Shc Cibus 150</li>
+                            <li>Mobil Shc 824</li>
+                            <li>Mobil Shc 639</li>
+                            <li>Mobil Shc 636</li>
+                            <li>Mobil Shc 634</li>
+                            <li>Mobil Shc 632</li>
+                            <li>Mobil Shc 630</li>
+                            <li>Mobil Shc 629</li>
+                            <li>Mobil Shc 627</li>
+                        </ul>
+                    </div>
+                    <div class="productos-column">
+                        <ul>
+                            <li>Mobil Shc 626</li>
+                            <li>Mobil Shc 624</li>
+                            <li>Mobilith Shc 526</li>
+                            <li>Mobil Shc Rarus 32</li>
+                            <li>Mobil Shc Rarus 46</li>
+                            <li>Mobil Shc Rarus 68</li>
+                            <li>Mobil Rarus 829</li>
+                            <li>Mobil Rarus 827</li>
+                            <li>Mobil Pegasus 1</li>
+                            <li>Mobil Glygoyle 68</li>
+                            <li>Mobil Glygoyle 460</li>
+                            <li>Mobil Glygoyle 320</li>
+                            <li>Glygoyle 30</li>
+                            <li>Mobil Glygoyle 22</li>
+                            <li>Mobil Glygoyle 150</li>
+                        </ul>
+                    </div>
+                    <div class="productos-column">
+                        <ul>
+                            <li>Mobil Glygoyle 1000</li>
+                            <li>Mobil Glygoyle 100</li>
+                            <li>Mobil Gargoyle Arctic Shc 226</li>
+                            <li>Mobil Eal Arctic 68</li>
+                            <li>Mobil Eal Envirosyn 46 H</li>
+                            <li>Mobil Jet Oil II</li>
+                            <li>Mobil Jet Oil 254</li>
+                            <li>Mobil Shc Rarus 46</li>
+                            <li>Mobil Glygoyle 11</li>
+                            <li>Mobil Delvac 1 Trans Fluid 40</li>
+                            <li>Mobilith Shc 100</li>
+                            <li>Mobil Glygoyle 680</li>
+                            <li>Mobil Glygoyle 220</li>
+                            <li>Mobil Delvac Ultra 5W-40 Ultimate Protection V1</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
 
             <div class="about-content" id="about-criterio" style="display:none;">
