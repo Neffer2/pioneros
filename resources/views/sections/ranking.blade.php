@@ -17,7 +17,7 @@
                 'key' => 'crecimiento_flagship',
                 'label' => 'Crecimiento % Flagship',
                 'data' => $crecimiento_flagship,
-                'suf' => '',
+                'suf' => '%',
             ],
             [
                 'key' => 'crecimiento_galones',
