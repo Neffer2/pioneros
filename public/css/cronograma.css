@@ -14,9 +14,12 @@
     align-items: center;
     flex-direction: column;
     width: 60%;
-    height: 700px;
+    height: 600px;
     padding: 5px;
-    background: linear-gradient(to right, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.85) 100%);
+    background-image: url('../assets/quienes-somos-fondo-shadow.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     border-radius: 10px;
     box-shadow: 0 4px 24px rgba(0, 0, 0, 0.10);
     position: relative;
@@ -38,6 +41,9 @@
 /* Contenedor de la tabla */
 .cronograma-table-container {
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 100%;
     overflow-x: auto;
     overflow-y: auto;
@@ -300,19 +306,18 @@
     align-items: center;
     flex-direction: row;
     width: 100%;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 20px;
 }
 
 .cronograma-top-container h2 {
     font-size: 2rem;
-    color: #003E71;
+    color: #fff;
 }
 
 .cronograma-top-container p {
     font-size: 1.2rem;
     font-family: 'Emprint Light', sans-serif;
     font-weight: bold;
-    color: #000;
+    color: #fff;
     margin: 0;
 }

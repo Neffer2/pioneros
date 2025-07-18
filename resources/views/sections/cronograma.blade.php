@@ -15,15 +15,9 @@
         <link rel="stylesheet" href="{{ asset('css/cronograma.css') }}?v={{ time() }}">
         <script>
             // Datos del cronograma - esto puede venir de la base de datos
-            const cronogramaData = [{
-                    descripcion: 'Invitación evento lanzamiento',
-                    fechas: {
-                        'jul-2025': 14
-                    }
-                },
+            const cronogramaData = [
                 {
                     descripcion: 'Evento de lanzamiento',
-                    clase: 'azul',
                     fechas: {
                         'jul-2025': 21
                     }
@@ -31,12 +25,12 @@
                 {
                     descripcion: 'Inscripciones AC',
                     fechas: {
-                        'jul-2025': '21 al 25'
+                        'jul-2025': '21-25'
                     },
                     clase: 'rojo'
                 },
                 {
-                    descripcion: 'Comunicación inicio actividad',
+                    descripcion: 'Inicio actividad',
                     fechas: {
                         'ago-2025': 1
                     }
@@ -49,37 +43,12 @@
                     },
                     clase: 'rojo-span',
                     colspan: {
-                        'ago-2025': 5, // agosto a diciembre
-                        'ene-2026': 6 // enero a junio
+                        'ago-2025': 5,
+                        'ene-2026': 6
                     }
                 },
                 {
-                    descripcion: 'Comunicación mantenimiento',
-                    fechas: {
-                        'sep-2025': 16,
-                        'nov-2025': 18,
-                        'ene-2026': 13,
-                        'mar-2026': 17,
-                        'may-2026': 12
-                    }
-                },
-                {
-                    descripcion: 'Comunicación recordatorios',
-                    fechas: {
-                        'dic-2025': 24,
-                        'jun-2026': 23
-                    }
-                },
-                {
-                    descripcion: 'Comunicación contenido',
-                    fechas: {
-                        'nov-2025': 14,
-                        'feb-2026': 16,
-                        'abr-2026': 13
-                    }
-                },
-                {
-                    descripcion: 'Comunicación corte 1ra bandera',
+                    descripcion: 'Corte 1ra bandera',
                     fechas: {
                         'dic-2025': 31
                     }
@@ -87,27 +56,21 @@
                 {
                     descripcion: 'Calificación resultados',
                     fechas: {
-                        'ene-2026': '2 al 16',
-                        'jul-2026': '1 al 17'
+                        'ene-2026': '2 - 16',
+                        'ago-2026': '1 - 17'
                     },
                     clase: 'rojo'
                 },
                 {
-                    descripcion: 'Comunicación resultados preliminares',
+                    descripcion: 'Resultados preliminares',
                     fechas: {
                         'ene-2026': 20
                     }
                 },
                 {
-                    descripcion: 'Comunicación cierre actividad',
+                    descripcion: 'Cierre actividad',
                     fechas: {
                         'jun-2026': 30
-                    }
-                },
-                {
-                    descripcion: 'Invitación evento premiación',
-                    fechas: {
-                        'jul-2026': 21
                     }
                 },
                 {
@@ -116,12 +79,6 @@
                         'ago-2026': 10
                     },
                     clase: 'azul'
-                },
-                {
-                    descripcion: 'Comunicación ganadores',
-                    fechas: {
-                        'ago-2026': 10
-                    }
                 }
             ];
 
