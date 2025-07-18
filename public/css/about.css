@@ -67,11 +67,11 @@
 }
 
 .about-content p {
-    font-size: 1.1rem;
+    font-size: 1.15rem;
     color: #fff;
-    line-height: 1.1;
+    line-height: 1.2;
     font-family: 'Emprint light', Arial, sans-serif;
-    font-weight: 400;
+    font-weight: 500;
     text-align: justify;
     margin-bottom: 20px;
 }
