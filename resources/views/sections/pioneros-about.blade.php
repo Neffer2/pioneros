@@ -17,30 +17,47 @@
             <div class="about-content" id="about-general">
                 <h2>¿Qué es P1oneros?</h2>
                 <p>
-                    Una iniciativa de Mobil Industria para reconocer el trabajo, las acciones y los resultados obtenidos del
+                    Una iniciativa de Mobilᵗʰ Industria para reconocer el trabajo, las acciones y los resultados obtenidos del
                     equipo de ventas B2B con la venta y uso de productos Flagship.
                 </p>
             </div>
             <div class="about-content" id="about-mecanica" style="display:none;">
                 <h2>Mecánica de participación</h2>
-                <p>
-                    • Cada uno de los AC debe inscribir a los Asesores Comerciales B2B, Ingenieros de Lubricación y
-                    Directores
-                    Comerciales que participarán en la actividad, a través del formato que enviaremos en el evento de
-                    lanzamiento. Cierre de inscripciones: 25 de julio de 2025.
-                </p>
-                <p>
-                    • Desde el 1 de agosto de 2025 hasta el 30 de junio de 2026, los AC deberán subir a Vision los reportes
-                    de
-                    ventas en productos de la categoría Flagship pertenecientes al segmento B2B en las líneas de negocio CVL
-                    e Industria; para cumplir con los criterios de evaluación (KPIs) de la actividad.
-                </p>
-                <p>
-                    • A la par, deben reportar el mayor número de beneficios generados a sus Clientes B2B con los productos
-                    participantes, realizando el debido proceso de generación de POPs y HiPOPs (entrega y recepción por
-                    cliente de pruebas de desempeño con autorización firmada de generación de HiPOPs), durante el período de
-                    evaluación*.
-                </p>
+                <div class="mecanica-grid">
+                    <div class="mecanica-item">
+                        <div class="mecanica-number">1.</div>
+                        <div class="mecanica-icon">
+                            <img src="{{ asset('assets/mecanica-uno.png') }}" alt="Inscripción">
+                        </div>
+                        <div class="mecanica-text">
+                            <p>Inscribir a los equipos participantes:</p>
+                            <p>Asesores B2B, Ingenieros Lubricación y Directores Comerciales</p>
+                            <p class="mecanica-note">Cierre: 25 de julio de 2025.</p>
+                        </div>
+                    </div>
+                    <div class="mecanica-item">
+                        <div class="mecanica-number">2.</div>
+                        <div class="mecanica-icon">
+                            <img src="{{ asset('assets/mecanica-dos.png') }}" alt="Ventas">
+                        </div>
+                        <div class="mecanica-text">
+                            <p>Venta por valor en productos flagship</p>
+                            <p>cumpliendo con los KPIs durante el</p>
+                            <p>período de evaluación.</p>
+                        </div>
+                    </div>
+                    <div class="mecanica-item">
+                        <div class="mecanica-number">3.</div>
+                        <div class="mecanica-icon">
+                            <img src="{{ asset('assets/mecanica-tres.png') }}" alt="Reportes">
+                        </div>
+                        <div class="mecanica-text">
+                            <p>Reportar el mayor número de</p>
+                            <p>beneficios a Clientes B2B con la</p>
+                            <p>generación de POPs y HiPOPs*.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="about-content" id="about-productos" style="display:none;">
                 <h2>Productos participantes</h2>
@@ -69,95 +86,95 @@
                     <div class="productos-column">
                         <ul>
                             <li>Synturion 6</li>
-                            <li>Mobil Delvac 1 Transmission Fluid Mbt 75W-90</li>
-                            <li>Mobil Delvac 1 Transmission Fluid V30</li>
-                            <li>Mobil Delvac 1 Transmission Fluid 50</li>
-                            <li>Mobil Delvac 1 Gear Oil 80W-140</li>
-                            <li>Mobil Delvac 1 Gear Oil 75W-90</li>
-                            <li>Mobil Delvac 1 Atf</li>
-                            <li>Mobil Delvac 1 Le 5W30</li>
+                            <li>Mobilᵗʰ Delvac 1 Transmission Fluid Mbt 75W-90</li>
+                            <li>Mobilᵗʰ Delvac 1 Transmission Fluid V30</li>
+                            <li>Mobilᵗʰ Delvac 1 Transmission Fluid 50</li>
+                            <li>Mobilᵗʰ Delvac 1 Gear Oil 80W-140</li>
+                            <li>Mobilᵗʰ Delvac 1 Gear Oil 75W-90</li>
+                            <li>Mobilᵗʰ Delvac 1 Atf</li>
+                            <li>Mobilᵗʰ Delvac 1 Le 5W30</li>
                             <li>Pyrolube 830</li>
-                            <li>Mobiltemp Shc 32</li>
-                            <li>Mobiltemp Shc 100</li>
-                            <li>Mobilith Shc Pm 460</li>
-                            <li>Mobilith Shc 460</li>
-                            <li>Mobilith Shc 220</li>
-                            <li>Mobilith Shc 1500</li>
+                            <li>Mobiltempᵗʰ Shc 32</li>
+                            <li>Mobiltempᵗʰ Shc 100</li>
+                            <li>Mobilitᵗʰ Shc Pm 460</li>
+                            <li>Mobilitᵗʰ Shc 460</li>
+                            <li>Mobilitᵗʰ Shc 220</li>
+                            <li>Mobilitᵗʰ Shc 1500</li>
                         </ul>
                     </div>
                     <div class="productos-column">
                         <ul>
-                            <li>Mobilith Shc 100</li>
-                            <li>Mobilith Shc 007</li>
-                            <li>Mobil Shc Polyrex 462</li>
-                            <li>Mobil Shc Polyrex 222</li>
-                            <li>Mobil Shc Pm 220</li>
-                            <li>Mobilgear Shc Xmp 320</li>
-                            <li>Mobilgear Shc Xmp 460</li>
-                            <li>Mobil Shc Gear 6800</li>
-                            <li>Mobil Shc Gear 680</li>
-                            <li>Mobil Shc Gear 460M</li>
-                            <li>Mobil Shc Gear 3200</li>
-                            <li>Mobil Shc Gear 320</li>
-                            <li>Mobil Shc Gear 22M</li>
-                            <li>Mobil Shc Gear 220</li>
-                            <li>Mobil Shc Gear 1500</li>
+                            <li>Mobilitᵗʰ Shc 100</li>
+                            <li>Mobilitᵗʰ Shc 007</li>
+                            <li>Mobilᵗʰ Shc Polyrex 462</li>
+                            <li>Mobilᵗʰ Shc Polyrex 222</li>
+                            <li>Mobilᵗʰ Shc Pm 220</li>
+                            <li>Mobilgearᵗʰ Shc Xmp 320</li>
+                            <li>Mobilgearᵗʰ Shc Xmp 460</li>
+                            <li>Mobilᵗʰ Shc Gear 6800</li>
+                            <li>Mobilᵗʰ Shc Gear 680</li>
+                            <li>Mobilᵗʰ Shc Gear 460M</li>
+                            <li>Mobilᵗʰ Shc Gear 3200</li>
+                            <li>Mobilᵗʰ Shc Gear 320</li>
+                            <li>Mobilᵗʰ Shc Gear 22M</li>
+                            <li>Mobilᵗʰ Shc Gear 220</li>
+                            <li>Mobilᵗʰ Shc Gear 1500</li>
                         </ul>
                     </div>
                     <div class="productos-column">
                         <ul>
-                            <li>Mobil Shc Cibus 68</li>
+                            <li>Mobilᵗʰ Shc Cibus 68</li>
                             <li>M-Shc Cibus 460</li>
-                            <li>Mobil Shc Cibus 46</li>
-                            <li>Mobil Shc Cibus 320</li>
-                            <li>Mobil Shc Cibus 32</li>
-                            <li>Mobil Shc Cibus 220</li>
+                            <li>Mobilᵗʰ Shc Cibus 46</li>
+                            <li>Mobilᵗʰ Shc Cibus 320</li>
+                            <li>Mobilᵗʰ Shc Cibus 32</li>
+                            <li>Mobilᵗʰ Shc Cibus 220</li>
                             <li>M-Shc Cibus 150</li>
-                            <li>Mobil Shc 824</li>
-                            <li>Mobil Shc 639</li>
-                            <li>Mobil Shc 636</li>
-                            <li>Mobil Shc 634</li>
-                            <li>Mobil Shc 632</li>
-                            <li>Mobil Shc 630</li>
-                            <li>Mobil Shc 629</li>
-                            <li>Mobil Shc 627</li>
+                            <li>Mobilᵗʰ Shc 824</li>
+                            <li>Mobilᵗʰ Shc 639</li>
+                            <li>Mobilᵗʰ Shc 636</li>
+                            <li>Mobilᵗʰ Shc 634</li>
+                            <li>Mobilᵗʰ Shc 632</li>
+                            <li>Mobilᵗʰ Shc 630</li>
+                            <li>Mobilᵗʰ Shc 629</li>
+                            <li>Mobilᵗʰ Shc 627</li>
                         </ul>
                     </div>
                     <div class="productos-column">
                         <ul>
-                            <li>Mobil Shc 626</li>
-                            <li>Mobil Shc 624</li>
-                            <li>Mobilith Shc 526</li>
-                            <li>Mobil Shc Rarus 32</li>
-                            <li>Mobil Shc Rarus 46</li>
-                            <li>Mobil Shc Rarus 68</li>
-                            <li>Mobil Rarus 829</li>
-                            <li>Mobil Rarus 827</li>
-                            <li>Mobil Pegasus 1</li>
-                            <li>Mobil Glygoyle 68</li>
-                            <li>Mobil Glygoyle 460</li>
-                            <li>Mobil Glygoyle 320</li>
+                            <li>Mobilᵗʰ Shc 626</li>
+                            <li>Mobilᵗʰ Shc 624</li>
+                            <li>Mobilitᵗʰ Shc 526</li>
+                            <li>Mobilᵗʰ Shc Rarus 32</li>
+                            <li>Mobilᵗʰ Shc Rarus 46</li>
+                            <li>Mobilᵗʰ Shc Rarus 68</li>
+                            <li>Mobilᵗʰ Rarus 829</li>
+                            <li>Mobilᵗʰ Rarus 827</li>
+                            <li>Mobilᵗʰ Pegasus 1</li>
+                            <li>Mobilᵗʰ Glygoyle 68</li>
+                            <li>Mobilᵗʰ Glygoyle 460</li>
+                            <li>Mobilᵗʰ Glygoyle 320</li>
                             <li>Glygoyle 30</li>
-                            <li>Mobil Glygoyle 22</li>
-                            <li>Mobil Glygoyle 150</li>
+                            <li>Mobilᵗʰ Glygoyle 22</li>
+                            <li>Mobilᵗʰ Glygoyle 150</li>
                         </ul>
                     </div>
                     <div class="productos-column">
                         <ul>
-                            <li>Mobil Glygoyle 1000</li>
-                            <li>Mobil Glygoyle 100</li>
-                            <li>Mobil Gargoyle Arctic Shc 226</li>
-                            <li>Mobil Eal Arctic 68</li>
-                            <li>Mobil Eal Envirosyn 46 H</li>
-                            <li>Mobil Jet Oil II</li>
-                            <li>Mobil Jet Oil 254</li>
-                            <li>Mobil Shc Rarus 46</li>
-                            <li>Mobil Glygoyle 11</li>
-                            <li>Mobil Delvac 1 Trans Fluid 40</li>
-                            <li>Mobilith Shc 100</li>
-                            <li>Mobil Glygoyle 680</li>
-                            <li>Mobil Glygoyle 220</li>
-                            <li>Mobil Delvac Ultra 5W-40 Ultimate Protection V1</li>
+                            <li>Mobilᵗʰ Glygoyle 1000</li>
+                            <li>Mobilᵗʰ Glygoyle 100</li>
+                            <li>Mobilᵗʰ Gargoyle Arctic Shc 226</li>
+                            <li>Mobilᵗʰ Eal Arctic 68</li>
+                            <li>Mobilᵗʰ Eal Envirosyn 46 H</li>
+                            <li>Mobilᵗʰ Jet Oil II</li>
+                            <li>Mobilᵗʰ Jet Oil 254</li>
+                            <li>Mobilᵗʰ Shc Rarus 46</li>
+                            <li>Mobilᵗʰ Glygoyle 11</li>
+                            <li>Mobilᵗʰ Delvac 1 Trans Fluid 40</li>
+                            <li>Mobilitᵗʰ Shc 100</li>
+                            <li>Mobilᵗʰ Glygoyle 680</li>
+                            <li>Mobilᵗʰ Glygoyle 220</li>
+                            <li>Mobilᵗʰ Delvac Ultra 5W-40 Ultimate Protection V1</li>
                         </ul>
                     </div>
                 </div>
@@ -172,40 +189,40 @@
                 </div>
                 <div class="criterio-productos-list">
                     <ul>
-                        <li>Mobil DTE 800</li>
-                        <li>Mobil DTE 900</li>
-                        <li>Mobil DTE 10 Excel</li>
-                        <li>Mobil DTE 20 Ultra</li>
-                        <li>Mobil DTE 700</li>
-                        <li>Mobil DTE 732 M</li>
-                        <li>Mobil DTE 746</li>
-                        <li>Mobil DTE 932 GT</li>
-                        <li>Mobil DTE 932</li>
-                        <li>Mobil DTE 936</li>
+                        <li>Mobilᵗʰ DTE 800</li>
+                        <li>Mobilᵗʰ DTE 900</li>
+                        <li>Mobilᵗʰ DTE 10 Excel</li>
+                        <li>Mobilᵗʰ DTE 20 Ultra</li>
+                        <li>Mobilᵗʰ DTE 700</li>
+                        <li>Mobilᵗʰ DTE 732 M</li>
+                        <li>Mobilᵗʰ DTE 746</li>
+                        <li>Mobilᵗʰ DTE 932 GT</li>
+                        <li>Mobilᵗʰ DTE 932</li>
+                        <li>Mobilᵗʰ DTE 936</li>
                     </ul>
                     <ul>
-                        <li>Mobilgear 600 XP 220</li>
-                        <li>Mobilgear 600 XP 320</li>
-                        <li>Mobilgear 600 XP 460</li>
-                        <li>Mobilgear SHC XMP 150</li>
-                        <li>Mobilgear SHC XMP 220</li>
-                        <li>Mobilgear SHC XMP 320</li>
-                        <li>Mobilgear SHC XMP 460</li>
-                        <li>Mobilith SHC 100</li>
-                        <li>Mobilith SHC 220</li>
-                        <li>Mobilith SHC 460</li>
+                        <li>Mobilgearᵗʰ 600 XP 220</li>
+                        <li>Mobilgearᵗʰ 600 XP 320</li>
+                        <li>Mobilgearᵗʰ 600 XP 460</li>
+                        <li>Mobilgearᵗʰ SHC XMP 150</li>
+                        <li>Mobilgearᵗʰ SHC XMP 220</li>
+                        <li>Mobilgearᵗʰ SHC XMP 320</li>
+                        <li>Mobilgearᵗʰ SHC XMP 460</li>
+                        <li>Mobilitᵗʰ SHC 100</li>
+                        <li>Mobilitᵗʰ SHC 220</li>
+                        <li>Mobilitᵗʰ SHC 460</li>
                     </ul>
                     <ul>
-                        <li>Mobilith SHC 1500</li>
-                        <li>Mobilith SHC 2200</li>
-                        <li>Mobilith SHC 4600</li>
-                        <li>Mobilith SHC 6800</li>
-                        <li>Mobilith SHC PM 220</li>
-                        <li>Mobilith SHC PM 460</li>
-                        <li>Mobilith SHC PM 1000</li>
-                        <li>Mobilith SHC PM 1500</li>
-                        <li>Mobilith SHC PM 2200</li>
-                        <li>Mobilith SHC PM 4600</li>
+                        <li>Mobilitᵗʰ SHC 1500</li>
+                        <li>Mobilitᵗʰ SHC 2200</li>
+                        <li>Mobilitᵗʰ SHC 4600</li>
+                        <li>Mobilitᵗʰ SHC 6800</li>
+                        <li>Mobilitᵗʰ SHC PM 220</li>
+                        <li>Mobilitᵗʰ SHC PM 460</li>
+                        <li>Mobilitᵗʰ SHC PM 1000</li>
+                        <li>Mobilitᵗʰ SHC PM 1500</li>
+                        <li>Mobilitᵗʰ SHC PM 2200</li>
+                        <li>Mobilitᵗʰ SHC PM 4600</li>
                     </ul>
                 </div>
                 <button class="criterio-btn" id="btn-productos">Productos participantes <span
@@ -282,6 +299,14 @@
                 const tab = this.getAttribute('data-tab');
                 document.querySelectorAll('.about-content').forEach(c => c.style.display = 'none');
                 document.getElementById('about-' + tab).style.display = 'flex';
+                
+                // Manejar cambio de fondo
+                const aboutInfo = document.querySelector('.about-info');
+                aboutInfo.classList.remove('mecanica-active');
+                
+                if (tab === 'mecanica') {
+                    aboutInfo.classList.add('mecanica-active');
+                }
             });
         });
         // Botón para mostrar lista de productos
