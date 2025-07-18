@@ -59,7 +59,7 @@
                     lubricante (transmisiones, industrial, grasas, engranajes, hidráulico, aviación, etc.), formato de
                     empaque (tambor, balde, unidad, cuartos).
                 </p>
-                <button class="criterio-btn" id="btn-criterio">Productos <span>&#8250;</span></button>
+                <button class="criterio-btn" id="btn-criterio">Lista de productos <span>&#8250;</span></button>
             </div>
 
             <div class="about-content" id="about-productos-lista" style="display:none;">

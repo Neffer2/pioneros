@@ -44,34 +44,37 @@
             {{-- Vista Total Premios --}}
             <div class="premios-section" id="section-total_premios" style="display: flex;">
                 <div class="premios-content-total">
-                    <div class="premios-header">
-                        <div class="premio-mayor">
 
-                            <div class="premio-info">
-                                <div class="trophy-icon">
-                                    <img src="{{ asset('assets/icono-trofeo.png') }}" alt="">
-                                </div>
-                                <div class="premio-info-text">
-                                    <h2>1 Premio mayor</h2>
-                                    <h3>23 Premios aspiracionales</h3>
-                                </div>
+                    <div class="premio-mayor">
+
+                        <div class="premio-info">
+                            <div class="trophy-icon">
+                                <img src="{{ asset('assets/icono-trofeo.png') }}" alt="">
                             </div>
-                            <div class="premios-img">
-                                <img src="{{ asset('assets/puestos-uno.png') }}" alt="Premios Totales">
-                            </div>
-                            <div class="premios-img">
-                                <img src="{{ asset('assets/puestos-dos.png') }}" alt="Premios Totales">
-                            </div>
-                            <div class="premio-info-bottom">
-                                <p> Más de $200 millones <span class="premios-info-span">de pesos en premios</span></p>
+                            <div class="premio-info-text">
+                                <h2>1 Premio mayor</h2>
+                                <h3>23 Premios aspiracionales</h3>
                             </div>
                         </div>
+                        <div class="premios-img">
+                            <img src="{{ asset('assets/puestos-uno.png') }}" alt="Premios Totales">
+                        </div>
+                        <div class="premios-img">
+                            <img src="{{ asset('assets/puestos-dos.png') }}" alt="Premios Totales">
+                        </div>
+                        <div class="premios-img">
+                            <img src="{{ asset('assets/puestos-tres.png') }}" alt="Premios Totales">
+                        </div>
                     </div>
-
-                    <div class="premios-details">
-
+                    <div class="premio-info-bottom">
+                        <p> Más de $200 millones <span class="premios-info-span">de pesos en premios</span></p>
                     </div>
                 </div>
+
+                <div class="premios-details">
+
+                </div>
+
             </div>
 
             {{-- Vista 1er Lugar --}}
