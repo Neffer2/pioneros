@@ -37,10 +37,10 @@
                 </div>
 
                 <div class="form-treatment">
-                    <label>
+                    <a href="{{ asset('assets/legal/habeas_data.pdf') }}" target="_blank">
                         <input type="checkbox" name="remember" required>
                         Tratamiento de datos personales
-                    </label>
+                    </a>
                 </div>
 
                 <div class="form-submit">

@@ -63,9 +63,11 @@
     text-transform: capitalize;
 }
 
-.form-treatment label {
+.form-treatment a {
     font-family: 'Emprint Regular', Arial, sans-serif;
     font-size: 1rem;
+    color: #fff;
+    text-decoration: none;
 }
 
 .form-submit {
