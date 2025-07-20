@@ -80,8 +80,25 @@
             {{-- Vista 1er Lugar --}}
             <div class="premios-section" id="section-primer_lugar" style="display: none;">
                 <h2>Experiencia Motorsport</h2>
-                <div class="premios-content">
-                    <img src="{{ asset('assets/pieza-primer-puesto.png') }}" alt="Primer puesto">
+                <div class="primer-lugar-content">
+                    <div class="primer-lugar-left">
+                        <div class="primer-lugar-img-container">
+                            <img src="{{ asset('assets/premios/primer/placa-primer.png') }}" alt="Placa Primer Lugar">
+                            <img src="{{ asset('assets/premios/primer/merch-primer.png') }}" alt="Merch Primer Lugar">
+                        </div>
+                        <div class="primer-lugar-text">
+                            <h3>Placa conmemorativa + Merch Oficial Mobil 1™ NASCAR</h3>
+                            <p>Director Comercial ● Asesor Comercial B2B ● Ingeniero de Lubricación</p>
+                        </div>
+                    </div>
+                    <div class="primer-lugar-center">
+                        <p>+</p>
+                    </div>
+                    <div class="primer-lugar-right">
+                        <div class="primer-lugar-img-container">
+                            <img src="{{ asset('assets/premios/primer/experiencia-primer.png') }}" alt="Experiencia Primer Lugar">
+                        </div>
+                    </div>
                 </div>
             </div>
 
