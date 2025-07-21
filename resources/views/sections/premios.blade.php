@@ -96,7 +96,8 @@
                     </div>
                     <div class="primer-lugar-right">
                         <div class="primer-lugar-img-container">
-                            <img src="{{ asset('assets/premios/primer/experiencia-primer.png') }}" alt="Experiencia Primer Lugar">
+                            <img src="{{ asset('assets/premios/primer/experiencia-primer.png') }}"
+                                alt="Experiencia Primer Lugar">
                         </div>
                     </div>
                 </div>
@@ -108,19 +109,88 @@
                     <button class="carousel-arrow prev" id="prev2">❮</button>
                     <div class="carousel-content">
                         <h2 id="title2">Agente comercial</h2>
-                        <div class="premios-content">
-                            <div class="carousel-slides" id="slides2">
-                                <div class="slide active">
-                                    <img src="{{ asset('assets/pieza-segundo-puesto-agente-comercial.png') }}"
-                                        alt="Agente Comercial">
+                        <div class="carousel-slides" id="slides2">
+                            <div class="slide active">
+                                <div class="segundo-lugar-content">
+                                    <div class="segundo-lugar-item">
+                                        <img src="{{ asset('assets/premios/segundo/placa.png') }}"
+                                            alt="Placa conmemorativa">
+                                        <div>
+                                            <p>Placa conmemorativa</p>
+                                        </div>
+                                    </div>
+                                    <div class="segundo-lugar-item">
+                                        <img src="{{ asset('assets/premios/segundo/videoscopio.png') }}" alt="Videoscopio">
+                                        <div>
+                                            <p>Videoscopio</p>
+                                            <span>o gadgets para el celular</span>
+                                        </div>
+                                    </div>
+                                    <div class="segundo-lugar-item">
+                                        <img src="{{ asset('assets/premios/segundo/noria.png') }}"
+                                            alt="Curso de lubricación">
+                                        <div>
+                                            <p>Curso de lubricación</p>
+                                            <span>Certificación Noria</span>
+                                        </div>
+                                    </div>
+                                    <div class="segundo-lugar-item">
+                                        <img src="{{ asset('assets/premios/segundo/merch.png') }}" alt="Merch oficial">
+                                        <div>
+                                            <p>Merch oficial</p>
+                                            <span>Mobil 1™ NASCAR</span>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="slide">
-                                    <img src="{{ asset('assets/pieza-segundo-puesto-asesor-comercial.png') }}"
-                                        alt="Asesor Comercial B2B">
+                            </div>
+                            <div class="slide">
+                                <div class="segundo-lugar-content">
+                                    <div class="segundo-lugar-item">
+                                        <img src="{{ asset('assets/premios/segundo/placa.png') }}"
+                                            alt="Placa conmemorativa">
+                                        <div>
+                                            <p>Placa conmemorativa</p>
+                                        </div>
+                                    </div>
+                                    <div class="segundo-lugar-item">
+                                        <img src="{{ asset('assets/premios/segundo/bono.png') }}" alt="Bono de $1,000,000">
+                                        <div>
+                                            <p>Bono Monetario</p>
+                                            <span>Por $1'000.000</span>
+                                        </div>
+                                    </div>
+                                    <div class="segundo-lugar-item">
+                                        <img src="{{ asset('assets/premios/segundo/merch.png') }}" alt="Merch oficial">
+                                        <div>
+                                            <p>Merch oficial</p>
+                                            <span>Mobil 1™ NASCAR</span>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="slide">
-                                    <img src="{{ asset('assets/pieza-segundo-puesto-ingeniero.png') }}"
-                                        alt="Ingeniero de Lubricación">
+                            </div>
+                            <div class="slide">
+                                <div class="segundo-lugar-content">
+                                    <div class="segundo-lugar-item">
+                                        <img src="{{ asset('assets/premios/segundo/placa.png') }}"
+                                            alt="Placa conmemorativa">
+                                        <div>
+                                            <p>Placa conmemorativa</p>
+                                        </div>
+                                    </div>
+                                    <div class="segundo-lugar-item">
+                                        <img src="{{ asset('assets/premios/segundo/bono.png') }}" alt="Bono de $1,000,000">
+                                        <div>
+                                            <p>Bono Monetario</p>
+                                            <span>Por $1'000.000</span>
+                                        </div>
+                                    </div>
+                                    <div class="segundo-lugar-item">
+                                        <img src="{{ asset('assets/premios/segundo/merch.png') }}" alt="Merch oficial">
+                                        <div>
+                                            <p>Merch oficial</p>
+                                            <span>Mobil 1™ NASCAR</span>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -135,19 +205,84 @@
                     <button class="carousel-arrow prev" id="prev3">❮</button>
                     <div class="carousel-content">
                         <h2 id="title3">Agente comercial</h2>
-                        <div class="premios-content">
-                            <div class="carousel-slides" id="slides3">
-                                <div class="slide active">
-                                    <img src="{{ asset('assets/pieza-tercer-puesto-agente-comercial.png') }}"
-                                        alt="Agente Comercial">
+                        <div class="carousel-slides" id="slides3">
+                            <div class="slide active">
+                                <div class="tercer-lugar-content">
+                                    <div class="tercer-lugar-item">
+                                        <img src="{{ asset('assets/premios/tercero/placa.png') }}" alt="Placa conmemorativa">
+                                        <div>
+                                            <p>Placa conmemorativa</p>
+                                        </div>
+                                    </div>
+                                    <div class="tercer-lugar-item">
+                                        <img src="{{ asset('assets/premios/tercero/camara-termo.png') }}" alt="Camara termigrafica">
+                                        <div>
+                                            <p>Cámara termigráfica</p>
+                                            <span>o gadgets para el celular</span>
+                                        </div>
+                                    </div>
+                                     <div class="tercer-lugar-item">
+                                        <img src="{{ asset('assets/premios/tercero/curso.png') }}" alt="Curso de capacitación">
+                                        <div>
+                                            <p>Curso de lubricación</p>
+                                            <span>Certificación MTL1 O MLA 1</span>
+                                        </div>
+                                    </div>
+                                    <div class="tercer-lugar-item">
+                                        <img src="{{ asset('assets/premios/tercero/merch.png') }}" alt="Merch oficial">
+                                        <div>
+                                            <p>Merch oficial</p>
+                                            <span>Mobil 1™ NASCAR</span>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="slide">
-                                    <img src="{{ asset('assets/pieza-tercer-puesto-asesor-comercial.png') }}"
-                                        alt="Asesor Comercial B2B">
+                            </div>
+                            <div class="slide">
+                                <div class="tercer-lugar-content">
+                                    <div class="tercer-lugar-item">
+                                        <img src="{{ asset('assets/premios/tercero/placa.png') }}" alt="Placa conmemorativa">
+                                        <div>
+                                            <p>Placa conmemorativa</p>
+                                        </div>
+                                    </div>
+                                    <div class="tercer-lugar-item">
+                                        <img src="{{ asset('assets/premios/tercero/bono.png') }}" alt="Bono monetario">
+                                        <div>
+                                            <p>Bono Monetario</p>
+                                            <span>Por $500.000</span>
+                                        </div>
+                                    </div>
+                                    <div class="tercer-lugar-item">
+                                        <img src="{{ asset('assets/premios/tercero/merch.png') }}" alt="Merch oficial">
+                                        <div>
+                                            <p>Merch oficial</p>
+                                            <span>Mobil 1™ NASCAR</span>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="slide">
-                                    <img src="{{ asset('assets/pieza-tercer-puesto-ingeniero.png') }}"
-                                        alt="Ingeniero de Lubricación">
+                            </div>
+                            <div class="slide">
+                                <div class="tercer-lugar-content">
+                                    <div class="tercer-lugar-item">
+                                        <img src="{{ asset('assets/premios/tercero/placa.png') }}" alt="Placa conmemorativa">
+                                        <div>
+                                            <p>Placa conmemorativa</p>
+                                        </div>
+                                    </div>
+                                    <div class="tercer-lugar-item">
+                                        <img src="{{ asset('assets/premios/tercero/bono.png') }}" alt="Bono monetario">
+                                        <div>
+                                            <p>Bono Monetario</p>
+                                            <span>Por $500.000</span>
+                                        </div>
+                                    </div>
+                                    <div class="tercer-lugar-item">
+                                        <img src="{{ asset('assets/premios/tercero/merch.png') }}" alt="Merch oficial">
+                                        <div>
+                                            <p>Merch oficial</p>
+                                            <span>Mobil 1™ NASCAR</span>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -156,8 +291,8 @@
                 </div>
             </div>
         </div>
-        @livewire('footer-component')
     </div>
+    @livewire('footer-component')
 
     <script>
         document.querySelectorAll('.premios-btn').forEach(btn => {
@@ -209,12 +344,12 @@
             }
 
             prevButton.addEventListener('click', () => {
-                currentSlide = (currentSlide - 1 + 3) % 3;
+                currentSlide = (currentSlide - 1 + titles.length) % titles.length;
                 updateSlides();
             });
 
             nextButton.addEventListener('click', () => {
-                currentSlide = (currentSlide + 1) % 3;
+                currentSlide = (currentSlide + 1) % titles.length;
                 updateSlides();
             });
         }
