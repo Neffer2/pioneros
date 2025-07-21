@@ -53,6 +53,7 @@
     box-sizing: border-box;
     scrollbar-width: thin;
     scrollbar-color: #003E71 #f1f1f1;
+    margin: 0;
 }
 
 /* Tabla principal */
@@ -78,6 +79,7 @@
     background-color: #6c757d !important;
     width: 200px;
     min-width: 200px;
+    position: sticky;
     left: 0;
     z-index: 3;
 }
@@ -117,6 +119,9 @@
     font-weight: 500;
     width: 200px;
     min-width: 200px;
+    position: sticky;
+    left: 0;
+    z-index: 2;
 }
 
 /* Colores para diferentes tipos de eventos */
@@ -354,8 +359,8 @@
 
 /* Estilos para el scrollbar */
 .cronograma-table-container::-webkit-scrollbar {
-    height: 10px;
-    width: 10px;
+    height: 8px;
+    width: 8px;
 }
 
 .cronograma-table-container::-webkit-scrollbar-track {
@@ -366,13 +371,13 @@
 .cronograma-table-container::-webkit-scrollbar-thumb {
     background: #003E71;
     border-radius: 6px;
-    border: 2px solid transparent;
+    border: 1px solid transparent;
     background-clip: padding-box;
 }
 
 .cronograma-table-container::-webkit-scrollbar-thumb:hover {
     background: #004a87;
-    border: 2px solid transparent;
+    border: 1px solid transparent;
     background-clip: padding-box;
 }
 
@@ -380,144 +385,261 @@
     background: transparent;
 }
 
-/* Responsive para pantallas pequeñas */
-@media (max-width: 900px) {
-    .cronograma-info {
-        flex-direction: column;
-        width: 95%;
-        height: auto;
-        min-width: 320px;
+/* Scrollbar más delgado para mobile */
+@media screen and (max-width: 768px) {
+    .cronograma-table-container::-webkit-scrollbar {
+        height: 6px;
+        width: 6px;
     }
-    .cronograma-left-container, .cronograma-right-container {
-        width: 100%;
-        min-width: 320px;
-        min-height: 300px;
+    
+    .cronograma-table-container::-webkit-scrollbar-track {
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 4px;
     }
-    #calendar {
-        min-width: 280px;
-        min-height: 300px;
-        padding: 8px 2px 2px 2px;
+    
+    .cronograma-table-container::-webkit-scrollbar-thumb {
+        background: rgba(0, 62, 113, 0.8);
+        border-radius: 4px;
+        border: none;
     }
 }
 
 /* Media Queries para Mobile */
 @media screen and (max-width: 768px) {
+    .cronograma-container {
+        padding: 10px;
+        min-height: 100vh;
+    }
 
     .cronograma-info {
-        width: 95%;
-        height: 550px;
-        padding: 12px;
+        width: 98%;
+        height: auto;
+        min-height: 500px;
+        padding: 10px;
+        margin: 0;
     }
 
     .cronograma-table-container {
-        padding: 12px;
+        padding: 8px;
+        margin: 0;
+        overflow-x: auto;
+        overflow-y: visible;
+        -webkit-overflow-scrolling: touch;
     }
 
     .cronograma-table {
         min-width: 800px;
-        font-size: 1.1rem;
+        font-size: 1rem;
+        table-layout: fixed;
     }
 
     .cronograma-table th {
-        padding: 6px 3px;
-        font-size: 0.9rem;
+        font-size: 0.85rem;
     }
 
     .cronograma-table td {
         padding: 4px 3px;
-        font-size: 0.85rem;
+        font-size: 0.8rem;
         height: 30px;
     }
 
     .descripcion-header, .descripcion-cell {
-        width: 150px;
-        min-width: 150px;
-        font-size: 0.8rem;
-        padding: 6px;
-    }
-
-    .year-header {
-        font-size: 1.1rem;
-    }
-
-    .month-header {
-        font-size: 0.85rem;
-        width: 50px;
-    }
-
-    .cronograma-top-container {
-        padding: 0 15px 15px 15px;
-    }
-
-    .cronograma-top-container h2 {
-        font-size: 2.2rem;
-        text-align: center;
-    }
-
-    .cronograma-top-container p {
-        font-size: 1rem;
-        text-align: center;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    .cronograma-info {
-        width: 98%;
-        height: 500px;
-        padding: 8px;
-        margin-top: 25%;
-    }
-
-    .cronograma-table-container {
-        padding: 8px;
-    }
-
-    .cronograma-table {
-        min-width: 700px;
-        font-size: 1rem;
-    }
-
-    .cronograma-table th {
-        padding: 4px 2px;
-        font-size: 0.8rem;
-    }
-
-    .cronograma-table td {
-        padding: 3px 2px;
+        width: 140px;
+        min-width: 140px;
         font-size: 0.75rem;
-        height: 25px;
+        padding: 6px 4px;
+        position: sticky;
+        left: 0;
+        background-color: #003E71;
     }
 
-    .descripcion-header, .descripcion-cell {
-        width: 120px;
-        min-width: 120px;
-        font-size: 0.7rem;
-        padding: 4px;
+    .descripcion-header {
+        background-color: #6c757d !important;
+        z-index: 3;
+        top: 0;
+    }
+
+    .descripcion-cell {
+        z-index: 2;
     }
 
     .year-header {
         font-size: 1rem;
+        position: sticky;
+        top: 0;
+        z-index: 1;
     }
 
     .month-header {
-        font-size: 0.75rem;
+        font-size: 0.8rem;
         width: 45px;
+        position: sticky;
+        top: 37px;
+        z-index: 1;
     }
 
     .cronograma-top-container {
-        padding: 0 10px 10px 10px;
+        padding: 0 10px 15px 10px;
+        margin-bottom: 10px;
     }
 
     .cronograma-top-container h2 {
         font-size: 1.8rem;
+        text-align: center;
+        margin-bottom: 8px;
     }
 
     .cronograma-top-container p {
         font-size: 0.9rem;
+        text-align: center;
+        line-height: 1.3;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .cronograma-container {
+        padding: 5px;
+    }
+
+    .cronograma-info {
+        width: 100%;
+        height: auto;
+        min-height: 450px;
+        padding: 8px;
+        margin: 0;
+        border-radius: 8px;
+    }
+
+    .cronograma-table-container {
+        padding: 6px;
+        margin: 0;
+        border-radius: 8px;
+        overflow-x: auto;
+        overflow-y: visible;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .cronograma-table {
+        min-width: 650px;
+        font-size: 0.9rem;
+        table-layout: fixed;
+    }
+
+    .cronograma-table th {
+        font-size: 0.75rem;
+    }
+
+    .cronograma-table td {
+        padding: 3px 2px;
+        font-size: 0.7rem;
+        height: 25px;
+    }
+
+    .descripcion-header, .descripcion-cell {
+        width: 110px;
+        min-width: 110px;
+        font-size: 0.65rem;
+        padding: 4px 3px;
+        position: sticky;
+        left: 0;
+        background-color: #003E71;
+    }
+
+    .descripcion-header {
+        background-color: #6c757d !important;
+        z-index: 3;
+        top: 0;
+    }
+
+    .descripcion-cell {
+        z-index: 2;
+    }
+
+    .year-header {
+        font-size: 0.9rem;
+        position: sticky;
+        top: 0;
+        z-index: 1;
+    }
+
+    .month-header {
+        font-size: 0.7rem;
+        width: 38px;
+        position: sticky;
+        top: 30px;
+        z-index: 1;
+    }
+
+    .cronograma-top-container {
+        padding: 0 8px 12px 8px;
+        margin-bottom: 8px;
+    }
+
+    .cronograma-top-container h2 {
+        font-size: 1.5rem;
+        text-align: center;
+        margin-bottom: 6px;
+    }
+
+    .cronograma-top-container p {
+        font-size: 0.8rem;
+        text-align: center;
+        line-height: 1.2;
     }
 
     .rojo-span {
-        font-size: 8px !important;
+        font-size: 6px !important;
+        line-height: 1.1;
+    }
+
+    .rojo, .azul {
+        font-size: 0.65rem !important;
+    }
+}
+
+/* Media query adicional para pantallas muy pequeñas */
+@media screen and (max-width: 360px) {
+    .cronograma-info {
+        width: 100%;
+        min-height: 400px;
+        padding: 6px;
+    }
+
+    .cronograma-table-container {
+        padding: 4px;
+    }
+
+    .cronograma-table {
+        min-width: 600px;
+    }
+
+    .descripcion-header, .descripcion-cell {
+        width: 100px;
+        min-width: 100px;
+        font-size: 0.6rem;
+        padding: 3px;
+    }
+
+    .month-header {
+        width: 35px;
+        font-size: 0.65rem;
+    }
+
+    .cronograma-table td {
+        font-size: 0.65rem;
+        height: 22px;
+    }
+
+    .cronograma-top-container h2 {
+        font-size: 1.3rem;
+    }
+
+    .cronograma-top-container p {
+        font-size: 0.75rem;
+    }
+
+    .rojo-span {
+        font-size: 5px !important;
     }
 }
 
