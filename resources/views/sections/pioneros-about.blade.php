@@ -302,10 +302,12 @@
                 
                 // Manejar cambio de fondo
                 const aboutInfo = document.querySelector('.about-info');
-                aboutInfo.classList.remove('mecanica-active');
+                aboutInfo.classList.remove('mecanica-active', 'kpis-active');
                 
                 if (tab === 'mecanica') {
                     aboutInfo.classList.add('mecanica-active');
+                } else if (tab === 'kpis') {
+                    aboutInfo.classList.add('kpis-active');
                 }
             });
         });

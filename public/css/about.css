@@ -29,6 +29,10 @@
     background-image: url('../assets/quienes-somos-fondo-shadow.png');
 }
 
+.about-info.kpis-active {
+    background-image: url('../assets/quienes-somos-fondo-shadow.png');
+}
+
 .about-tabs {
     display: flex;
     gap: 5px;
