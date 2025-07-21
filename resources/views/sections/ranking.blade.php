@@ -73,15 +73,18 @@
                     <div class="podium-names ranking-section" id="podium-{{ $ranking['key'] }}"
                         style="display: {{ $i === 0 ? 'flex' : 'none' }};">
                         <div class="podium-number">
-                            <p data-tippy-content="{{ $top3[2]->descripcion ?? 'Agente' }}">{{ strtolower($top3[2]->descripcion ?? 'Agente') }}</p>
+                            <p data-tippy-content="{{ $top3[2]->descripcion ?? 'Agente' }}">
+                                {{ strtolower($top3[2]->descripcion ?? 'Agente') }}</p>
                             <p><b>{{ $top3[2]->{$ranking['key']} ?? '-' }}{{ $ranking['suf'] }}</b></p>
                         </div>
                         <div class="podium-number">
-                            <p data-tippy-content="{{ $top3[0]->descripcion ?? 'Agente' }}">{{ strtolower($top3[0]->descripcion ?? 'Agente') }}</p>
+                            <p data-tippy-content="{{ $top3[0]->descripcion ?? 'Agente' }}">
+                                {{ strtolower($top3[0]->descripcion ?? 'Agente') }}</p>
                             <p><b>{{ $top3[0]->{$ranking['key']} ?? '-' }}{{ $ranking['suf'] }}</b></p>
                         </div>
                         <div class="podium-number">
-                            <p data-tippy-content="{{ $top3[1]->descripcion ?? 'Agente' }}">{{ strtolower($top3[1]->descripcion ?? 'Agente') }}</p>
+                            <p data-tippy-content="{{ $top3[1]->descripcion ?? 'Agente' }}">
+                                {{ strtolower($top3[1]->descripcion ?? 'Agente') }}</p>
                             <p><b>{{ $top3[1]->{$ranking['key']} ?? '-' }}{{ $ranking['suf'] }}</b></p>
                         </div>
                     </div>
@@ -114,8 +117,8 @@
                 @endforeach
             </div>
         </div>
-        @livewire('footer-component')
     </div>
+    @livewire('footer-component')
 
     <script>
         document.querySelectorAll('.ranking-btn').forEach(btn => {
@@ -129,7 +132,7 @@
                 document.getElementById('table-' + this.dataset.ranking).style.display = 'block';
                 // Marca el botón activo
                 this.style.background = '#3b5ca8';
-                
+
                 // Cambiar el fondo según el ranking seleccionado
                 const container = document.querySelector('.ranking-info');
                 if (this.dataset.ranking === 'total_puntos') {

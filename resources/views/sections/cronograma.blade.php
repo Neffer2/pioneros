@@ -15,8 +15,7 @@
         <link rel="stylesheet" href="{{ asset('css/cronograma.css') }}?v={{ time() }}">
         <script>
             // Datos del cronograma - esto puede venir de la base de datos
-            const cronogramaData = [
-                {
+            const cronogramaData = [{
                     descripcion: 'Evento de lanzamiento',
                     fechas: {
                         'jul-2025': 21
@@ -184,10 +183,10 @@
                     </div>
                 </div>
             </div>
-            <livewire:footer-component />
             <livewire:menu-component />
 
         </div>
+        <livewire:footer-component />
         <script>
             document.addEventListener('DOMContentLoaded', function() {
                 console.log('Document loaded and ready');

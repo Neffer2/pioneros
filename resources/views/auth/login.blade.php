@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,10 +8,10 @@
     <link rel="stylesheet" href="{{ asset('css/login.css') }}?v={{ time() }}">
     <title>Iniciar Sesión - Pioneros</title>
 </head>
+
 <body>
     <div class="login-container">
         <img src="{{ asset('assets/logo-login-pioneros.png') }}" class="logo-login-pioneros" alt="Logo Pioneros">
-         <img src="{{ asset('assets/fill-with-mobil.png') }}" class="logo-login-pioneros-right" alt="Logo Fill With Mobil">
         <div class="login-form">
             <h1 class="login-title">Iniciar sesión</h1>
             @if (session('status'))
@@ -45,13 +46,16 @@
 
                 <div class="form-submit">
                     <button type="submit">Ingresar</button>
-                    
+
                     @if (Route::has('password.request'))
                         {{-- <a href="{{ route('password.request') }}">¿Olvidaste tu contraseña?</a> --}}
                     @endif
                 </div>
             </form>
         </div>
+        <img src="{{ asset('assets/fill-with-mobil.png') }}" class="logo-login-pioneros-right"
+            alt="Logo Fill With Mobil">
     </div>
 </body>
+
 </html>

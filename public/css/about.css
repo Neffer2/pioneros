@@ -1012,3 +1012,315 @@
         border-radius: 4px;
     }
 }
+
+/* Media Queries para Mobile */
+@media screen and (max-width: 768px) {
+
+    .about-info {
+        width: 95%;
+        height: 500px;
+        padding: 25px;
+        gap: 15px;
+    }
+
+    .about-tabs {
+        width: 95%;
+        gap: 3px;
+        margin-bottom: 10px;
+    }
+
+    .about-tab {
+        padding: 8px 12px;
+        min-height: 50px;
+        font-size: 0.85rem;
+    }
+
+    .about-content {
+        width: 100%;
+    }
+
+    .about-content h2 {
+        font-size: 1.8rem;
+        margin-bottom: 15px;
+        text-align: center;
+    }
+
+    .about-content p {
+        font-size: 1rem;
+        line-height: 1.4;
+        margin-bottom: 15px;
+        text-align: left;
+    }
+
+    /* Ajustes para la sección de criterios - Mobile */
+    .about-content#about-criterio h2 {
+        font-size: 1.6rem;
+        text-align: center;
+    }
+
+    .about-content#about-criterio h3 {
+        font-size: 1.2rem;
+        margin: 15px 0 8px 0;
+    }
+
+    .criterio-productos-list {
+        padding: 18px 12px 12px 12px;
+        min-height: 120px;
+        flex-direction: column;
+    }
+
+    .criterio-productos-list ul {
+        min-width: 100%;
+        font-size: 0.9rem;
+        padding: 0 12px;
+        margin-bottom: 10px;
+    }
+
+    .criterio-btn {
+        padding: 8px 20px;
+        font-size: 1rem;
+        margin-top: 15px;
+        align-self: center;
+    }
+
+    /* Ajustes para la tabla KPI - Mobile */
+    .kpi-header-row {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
+    .about-content#about-kpis h2 {
+        font-size: 1.8rem;
+        margin: 0 0 10px 0;
+        text-align: center;
+    }
+
+    .about-content#about-kpis p {
+        font-size: 0.9rem;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
+    .kpi-table-container {
+        width: 100%;
+        overflow-x: auto;
+        padding-bottom: 10px;
+    }
+
+    .kpi-table {
+        min-width: 600px;
+        font-size: 0.85rem;
+    }
+
+    .kpi-table th,
+    .kpi-table td {
+        padding: 8px 6px;
+        font-size: 0.8rem;
+    }
+
+    .kpi-table td:first-child {
+        width: 150px;
+        font-size: 0.75rem;
+        position: sticky;
+        left: 0;
+        background: #ededed;
+    }
+
+    /* Ajustes para lista de productos - Mobile */
+    .productos-container {
+        max-height: 400px;
+        gap: 20px;
+        padding: 20px;
+        flex-direction: column;
+    }
+
+    .productos-column {
+        width: 100%;
+    }
+
+    .productos-header h2 {
+        font-size: 1.8rem;
+        text-align: center;
+    }
+
+    /* Ajustes para mecánica - Mobile */
+    .about-content#about-mecanica {
+        padding: 15px;
+    }
+
+    .about-content#about-mecanica h2 {
+        font-size: 1.6rem;
+        text-align: center;
+        margin-bottom: 15px;
+        padding: 10px;
+    }
+
+    .mecanica-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        max-height: 350px;
+    }
+
+    .mecanica-item {
+        flex-direction: row;
+        text-align: left;
+        align-items: center;
+        gap: 12px;
+        padding: 12px;
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 12px;
+    }
+
+    .mecanica-number {
+        width: 35px;
+        height: 35px;
+        font-size: 1.4rem;
+        margin-bottom: 0;
+        flex-shrink: 0;
+    }
+
+    .mecanica-icon {
+        width: 70px;
+        height: 70px;
+        margin-bottom: 0;
+        flex-shrink: 0;
+    }
+
+    .mecanica-icon img {
+        width: 35px;
+        height: 35px;
+    }
+
+    .mecanica-text {
+        flex: 1;
+        max-width: none;
+        text-align: left;
+        font-size: 0.85rem;
+    }
+
+    .mecanica-note {
+        font-size: 0.75rem !important;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .about-info {
+        width: 98%;
+        height: 450px;
+        padding: 15px;
+    }
+
+    .about-tabs {
+        width: 98%;
+        gap: 2px;
+        margin-top: 200px;
+    }
+
+    .about-tab {
+        padding: 6px 8px;
+        min-height: 45px;
+        font-size: 0.75rem;
+    }
+
+    .about-content h2 {
+        font-size: 1.5rem;
+    }
+
+    .about-content p {
+        font-size: 0.9rem;
+    }
+
+    /* Ajustes para criterios - Mobile pequeño */
+    .about-content#about-criterio h2 {
+        font-size: 1.4rem;
+    }
+
+    .about-content#about-criterio h3 {
+        font-size: 1.1rem;
+    }
+
+    .criterio-productos-list ul {
+        font-size: 0.85rem;
+    }
+
+    .criterio-btn {
+        padding: 6px 15px;
+        font-size: 0.9rem;
+    }
+
+    /* Ajustes para KPI - Mobile pequeño */
+    .about-content#about-kpis h2 {
+        font-size: 1.5rem;
+    }
+
+    .about-content#about-kpis p {
+        font-size: 0.85rem;
+    }
+
+    .kpi-table {
+        min-width: 500px;
+    }
+
+    .kpi-table th,
+    .kpi-table td {
+        padding: 6px 4px;
+        font-size: 0.75rem;
+    }
+
+    .kpi-table td:first-child {
+        width: 120px;
+        font-size: 0.7rem;
+    }
+
+    /* Ajustes para mecánica - Mobile pequeño */
+    .about-content#about-mecanica h2 {
+        font-size: 1.4rem;
+    }
+
+    .mecanica-item {
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .mecanica-number {
+        width: 32px;
+        height: 32px;
+        font-size: 1.2rem;
+    }
+
+    .mecanica-icon {
+        width: 60px;
+        height: 60px;
+    }
+
+    .mecanica-icon img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .mecanica-text {
+        font-size: 0.8rem;
+    }
+
+    .mecanica-note {
+        font-size: 0.7rem !important;
+    }
+
+    /* Productos lista - Mobile pequeño */
+    .productos-header h2 {
+        font-size: 1.5rem;
+    }
+
+    .productos-container {
+        max-height: 350px;
+        padding: 15px;
+    }
+
+    .productos-column ul li {
+        font-size: 0.9rem;
+        padding: 8px 0;
+    }
+}

@@ -298,3 +298,150 @@
         max-height: 320px;
     }
 }
+
+/* Media Queries para Mobile */
+@media screen and (max-width: 768px) {
+    .ranking-container {
+        padding: 20px 10px;
+    }
+
+    .ranking-info {
+        width: 95%;
+        height: 500px;
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+    }
+
+    .ranking-switcher {
+        width: 95%;
+        gap: 3px;
+    }
+
+    .ranking-btn {
+        padding: 8px 12px;
+        min-height: 50px;
+        font-size: 0.85rem;
+    }
+
+    .ranking-left-container {
+        width: 100%;
+        height: 30%;
+    }
+
+    .ranking-right-container {
+        width: 100%;
+        height: 70%;
+    }
+
+    .ranking-right-container h4 {
+        font-size: 1.6rem;
+        margin-bottom: 10px;
+    }
+
+    .ranking-table td {
+        font-size: 1rem;
+        padding: 6px 8px;
+    }
+
+    .ranking-table td:first-child {
+        width: 40px;
+        font-size: 0.9rem;
+    }
+
+    .ranking-table td:nth-child(2) {
+        font-size: 0.9rem;
+        max-width: 120px;
+    }
+
+    .ranking-table td:last-child {
+        font-size: 0.9rem;
+        min-width: 60px;
+    }
+
+    .podium-names {
+        padding: 0 20px;
+    }
+
+    .podium-number p:first-child {
+        font-size: 0.8rem;
+        max-width: 40px;
+    }
+
+    .podium-number p:nth-child(2) {
+        font-size: 1.2rem;
+    }
+
+    .ranking-table-container {
+        max-height: 280px;
+        padding-right: 5px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .ranking-info {
+        width: 98%;
+        height: 100%;
+        padding: 10px;
+    }
+
+    .ranking-switcher {
+        margin-top: 150px;
+        width: 98%;
+        gap: 2px;
+    }
+
+    .ranking-btn {
+        padding: 6px 8px;
+        min-height: 45px;
+        font-size: 0.75rem;
+    }
+
+    .ranking-right-container h4 {
+        font-size: 1.4rem;
+        margin-bottom: 8px;
+    }
+
+    .ranking-table {
+        border-spacing: 0 8px;
+    }
+
+    .ranking-table td {
+        font-size: 0.9rem;
+        padding: 4px 6px;
+    }
+
+    .ranking-table td:first-child {
+        width: 35px;
+        font-size: 0.8rem;
+    }
+
+    .ranking-table td:nth-child(2) {
+        font-size: 0.8rem;
+        max-width: 100px;
+    }
+
+    .ranking-table td:last-child {
+        font-size: 0.8rem;
+        min-width: 50px;
+    }
+
+    .podium-names {
+        padding: 0 10px;
+    }
+
+    .podium-number p:first-child {
+        font-size: 0.7rem;
+        max-width: 35px;
+    }
+
+    .podium-number p:nth-child(2) {
+        font-size: 1rem;
+    }
+
+    .ranking-table-container {
+        max-height: 200px;
+        margin-bottom: 20px;
+
+    }
+}

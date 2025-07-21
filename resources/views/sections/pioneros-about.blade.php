@@ -288,8 +288,8 @@
             </div>
         </div>
 
-        @livewire('footer-component')
     </div>
+    @livewire('footer-component')
     <script>
         // Tabs principales
         document.querySelectorAll('.about-tab').forEach(btn => {

@@ -69,3 +69,47 @@
     font-size: 2rem;
     margin-top: -10px;
 }
+
+/* Media Queries para Mobile */
+@media screen and (max-width: 768px) {
+
+    .back-button {
+        bottom: 15px;
+        left: 15px;
+        font-size: 0.9rem;
+    }
+
+    #icono-regresar {
+        margin-right: 10px;
+        font-size: 1.8rem;
+        margin-top: -8px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .pioneros-logo-about {
+        max-width: 50%;
+        width: 50%;
+        top: 2px;
+        left: 2px;
+    }
+
+    .fill-with-mobil-logo {
+        max-width: 40%;
+        width: 40%;
+        top: 2px;
+        right: 2px;
+    }
+
+    .back-button {
+        bottom: 10px;
+        left: 10px;
+        font-size: 0.8rem;
+    }
+
+    #icono-regresar {
+        margin-right: 8px;
+        font-size: 1.6rem;
+        margin-top: -6px;
+    }
+}

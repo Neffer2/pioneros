@@ -598,6 +598,173 @@ h2 {
     }
 
 
+}
+
+/* Media Queries para Mobile */
+@media screen and (max-width: 768px) {
+    .premios-container {
+        padding: 20px 10px;
+    }
+
+    .premios-info {
+        width: 95%;
+        height: 500px;
+        padding: 15px;
+    }
+
+    .premios-switcher {
+        width: 95%;
+        gap: 3px;
+    }
+
+    .premios-btn {
+        padding: 8px 12px;
+        min-height: 50px;
+        font-size: 0.85rem;
+    }
+
+    .premios-section {
+        padding: 25px 15px;
+    }
+
+    #section-primer_lugar h2,
+    #section-segundo_lugar h2,
+    #section-tercer_lugar h2 {
+        font-size: 1.8rem;
+        margin-bottom: 15px;
+        text-align: center;
+    }
+
+    /* Estilos responsive para primer lugar - Móvil */
+    .primer-lugar-content {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+        text-align: center;
+    }
+
+    .primer-lugar-left {
+        flex: none;
+        width: 100%;
+    }
+
+    .primer-lugar-center {
+        flex: none;
+        width: 100%;
+        order: -1;
+    }
+
+    .primer-lugar-center p {
+        font-size: 2rem;
+        margin-bottom: 10px;
+    }
+
+    .primer-lugar-right {
+        flex: none;
+        width: 100%;
+    }
+
+    .primer-lugar-img-container {
+        gap: 10px;
+    }
+
+    .primer-lugar-img-container img {
+        width: 45%;
+    }
+
+    .primer-lugar-text h3 {
+        font-size: 1rem;
+        margin-bottom: 8px;
+    }
+
+    .primer-lugar-text p {
+        font-size: 0.85rem;
+    }
+
+    .primer-lugar-right img {
+        max-width: 200px;
+    }
+
+    /* Estilos responsive para segundo lugar - Móvil */
+    .segundo-lugar-content {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px 15px;
+        text-align: center;
+    }
+
+    .segundo-lugar-item {
+        width: 100%;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        text-align: left;
+        gap: 15px;
+        min-height: auto;
+    }
+
+    .segundo-lugar-item img {
+        max-width: 60px;
+        margin-bottom: 0;
+        flex-shrink: 0;
+        max-height: 60px;
+    }
+
+    .segundo-lugar-item div {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        min-height: auto;
+    }
+
+    .segundo-lugar-item p {
+        font-size: 0.9rem;
+    }
+
+    .segundo-lugar-item span {
+        font-size: 0.75rem;
+    }
+
+    /* Estilos responsive para tercer lugar - Móvil */
+    .tercer-lugar-content {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px 15px;
+        text-align: center;
+    }
+
+    .tercer-lugar-item {
+        width: 100%;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        text-align: left;
+        gap: 15px;
+        min-height: auto;
+    }
+
+    .tercer-lugar-item img {
+        max-width: 60px;
+        margin-bottom: 0;
+        flex-shrink: 0;
+        max-height: 60px;
+    }
+
+    .tercer-lugar-item div {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        min-height: auto;
+    }
+
+    .tercer-lugar-item p {
+        font-size: 0.9rem;
+    }
+
+    .tercer-lugar-item span {
+        font-size: 0.75rem;
+    }
+
     .premio-info-text h2 {
         font-size: 2.2rem;
     }
@@ -618,6 +785,7 @@ h2 {
         font-size: 1.8rem;
     }
 }
+
 
 @media screen and (max-width: 1024px) {
     .premios-info {
@@ -727,8 +895,6 @@ h2 {
     .tercer-lugar-item span {
         font-size: 0.7rem;
     }
-
-
 
     .premio-info-text h2 {
         font-size: 2rem;
@@ -925,6 +1091,7 @@ h2 {
 
     .premios-switcher {
         width: 95%;
+        margin-top: 200px;
     }
 
     .premios-btn {

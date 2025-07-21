@@ -61,7 +61,6 @@
     border-collapse: collapse;
     font-family: Arial, sans-serif;
     font-size: 1.3rem;
-    min-width: 1000px;
     background: white;
 }
 
@@ -73,14 +72,12 @@
     text-align: center;
     font-weight: bold;
     border: 1px solid #002851;
-    position: sticky;
 }
 
 .descripcion-header {
     background-color: #6c757d !important;
     width: 200px;
     min-width: 200px;
-    position: sticky;
     left: 0;
     z-index: 3;
 }
@@ -141,6 +138,8 @@
     color: white !important;
     font-weight: bold;
 }
+
+
 
 /* Celdas normales con datos */
 .cronograma-table td:not(.descripcion-cell):not(.rojo):not(.rojo-span):not(.azul) {
@@ -401,6 +400,127 @@
     }
 }
 
+/* Media Queries para Mobile */
+@media screen and (max-width: 768px) {
+
+    .cronograma-info {
+        width: 95%;
+        height: 550px;
+        padding: 12px;
+    }
+
+    .cronograma-table-container {
+        padding: 12px;
+    }
+
+    .cronograma-table {
+        min-width: 800px;
+        font-size: 1.1rem;
+    }
+
+    .cronograma-table th {
+        padding: 6px 3px;
+        font-size: 0.9rem;
+    }
+
+    .cronograma-table td {
+        padding: 4px 3px;
+        font-size: 0.85rem;
+        height: 30px;
+    }
+
+    .descripcion-header, .descripcion-cell {
+        width: 150px;
+        min-width: 150px;
+        font-size: 0.8rem;
+        padding: 6px;
+    }
+
+    .year-header {
+        font-size: 1.1rem;
+    }
+
+    .month-header {
+        font-size: 0.85rem;
+        width: 50px;
+    }
+
+    .cronograma-top-container {
+        padding: 0 15px 15px 15px;
+    }
+
+    .cronograma-top-container h2 {
+        font-size: 2.2rem;
+        text-align: center;
+    }
+
+    .cronograma-top-container p {
+        font-size: 1rem;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .cronograma-info {
+        width: 98%;
+        height: 500px;
+        padding: 8px;
+        margin-top: 25%;
+    }
+
+    .cronograma-table-container {
+        padding: 8px;
+    }
+
+    .cronograma-table {
+        min-width: 700px;
+        font-size: 1rem;
+    }
+
+    .cronograma-table th {
+        padding: 4px 2px;
+        font-size: 0.8rem;
+    }
+
+    .cronograma-table td {
+        padding: 3px 2px;
+        font-size: 0.75rem;
+        height: 25px;
+    }
+
+    .descripcion-header, .descripcion-cell {
+        width: 120px;
+        min-width: 120px;
+        font-size: 0.7rem;
+        padding: 4px;
+    }
+
+    .year-header {
+        font-size: 1rem;
+    }
+
+    .month-header {
+        font-size: 0.75rem;
+        width: 45px;
+    }
+
+    .cronograma-top-container {
+        padding: 0 10px 10px 10px;
+    }
+
+    .cronograma-top-container h2 {
+        font-size: 1.8rem;
+    }
+
+    .cronograma-top-container p {
+        font-size: 0.9rem;
+    }
+
+    .rojo-span {
+        font-size: 8px !important;
+    }
+}
+
 /* Fin calendario */
 
 .cronograma-calendar-container {
@@ -422,6 +542,7 @@
     width: 100%;
     padding: 0 20px 20px 20px;
     box-sizing: border-box;
+    margin-top: 25px;
 }
 
 .cronograma-top-container h2 {

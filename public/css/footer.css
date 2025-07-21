@@ -6,9 +6,9 @@
     height: 50px;
     background-color: #003E71;
     color: #fff;
-    position: absolute;
+    position: fixed;
     bottom: 0;
-    left: 0;
+
 }   
 
 .footer-content {
@@ -40,4 +40,59 @@
 
 .contact-link i {
     font-size: 1.1rem;
+}
+
+/* Media Queries para Mobile */
+@media screen and (max-width: 768px) {
+
+    
+    .footer-component {
+        height: 60px;
+        position: relative;
+    }
+
+    .footer-content {
+        width: 98%;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .footer-content p {
+        font-size: 0.9rem;
+        text-align: center;
+    }
+
+    .contact-link {
+        font-size: 0.9rem;
+        gap: 6px;
+    }
+
+    .contact-link i {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .footer-component {
+        height: 70px;
+    }
+
+    .footer-content {
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    .footer-content p {
+        font-size: 0.8rem;
+        line-height: 1.2;
+    }
+
+    .contact-link {
+        font-size: 0.8rem;
+        gap: 4px;
+    }
+
+    .contact-link i {
+        font-size: 0.9rem;
+    }
 }
