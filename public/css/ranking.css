@@ -227,8 +227,12 @@
         width: 70%;
     }
 
+    .ranking-title {
+        margin-top: 10px;
+    }
+
     .ranking-right-container h4 {
-        font-size: 2rem;
+        font-size: 1.4rem;
     }
 
     .ranking-table td {

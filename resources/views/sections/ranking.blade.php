@@ -11,7 +11,7 @@
                 'key' => 'total_puntos',
                 'label' => 'Ranking General',
                 'data' => $general,
-                'suf' => ' ',
+                'suf' => '',
             ],
             [
                 'key' => 'crecimiento_flagship',

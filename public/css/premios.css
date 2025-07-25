@@ -1,3 +1,4 @@
+/* ========== BASE STYLES ========== */
 .premios-container {
     display: flex;
     justify-content: center;
@@ -24,6 +25,136 @@
     position: relative;
     overflow: hidden;
     color: #fff;
+}
+
+.premios-switcher {
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5px;
+    width: 60%;
+}
+
+.premios-btn {
+    padding: 8px 18px;
+    min-height: 55px;
+    width: 100%;
+    border-radius: 6px;
+    border: none;
+    background: #003E71;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.premios-btn:hover {
+    background: #3b5ca8;
+}
+
+.premios-section {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    padding: 50px;
+}
+
+/* ========== TOTAL PREMIOS SECTION ========== */
+.premios-content-total {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    gap: 20px;
+}
+
+.premio-mayor {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.premio-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+}
+
+.trophy-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    flex-shrink: 0;
+}
+
+.trophy-icon img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.premio-info-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.premio-info-text h2 {
+    font-size: 2.6rem;
+    margin: 0;
+    color: #fff;
+    font-weight: bold;
+}
+
+.premio-info-text h3 {
+    font-size: 2rem;
+    margin: 0;
+    color: #fff;
+    font-weight: normal;
+}
+
+.premios-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.premios-img img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.premio-info-bottom {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    font-weight: bold;
+    width: 100%;
+    font-size: 2.2rem;
+    color: #fff;
+    margin-top: 20px;
+}
+
+.premios-info-span {
+    display: block;
 }
 
 /* Primer lugar */
@@ -493,296 +624,356 @@ h2 {
     display: block;
 }
 
-/* Media queries para portátiles */
-@media screen and (max-width: 1366px) {
+/* ========== LAPTOP RESPONSIVE (1200px - 1600px) ========== */
+@media screen and (max-width: 1600px) and (min-width: 1200px) {
     .premios-info {
         width: 70%;
-        height: 450px;
+        height: 550px;
+        padding: 25px;
     }
 
     .premios-switcher {
         width: 70%;
     }
 
-    .premios-btn {
-        min-height: 50px;
-    }
-
     .premios-section {
-        padding: 30px;
+        padding: 40px;
     }
 
-    #section-primer_lugar h2,
-    #section-segundo_lugar h2,
-    #section-tercer_lugar h2 {
-        font-size: 2rem;
-        margin-bottom: 15px;
+    /* Premio Mayor - Laptop */
+    .premio-mayor {
+        gap: 18px;
     }
 
-    /* Estilos responsive para primer lugar - Laptop */
-    .primer-lugar-content {
-        gap: 15px;
-        padding: 15px;
+    .premio-info {
+        gap: 18px;
     }
 
-    .primer-lugar-img-container img {
-        width: 80%;
-    }
-
-    .primer-lugar-text h3 {
-        font-size: 1rem;
-    }
-
-    .primer-lugar-text p {
-        font-size: 0.8rem;
-    }
-
-    .primer-lugar-center p {
-        font-size: 2.5rem;
-    }
-
-    /* Estilos responsive para segundo lugar - Laptop */
-    .segundo-lugar-content {
-        gap: 15px;
-        padding: 25px 15px;
-        align-items: flex-end;
-    }
-
-    .segundo-lugar-item {
-        min-height: 180px;
-    }
-
-    .segundo-lugar-item img {
-        max-width: 100px;
-        max-height: 100px;
-    }
-
-    .segundo-lugar-item div {
-        min-height: 45px;
-    }
-
-    .segundo-lugar-item p {
-        font-size: 0.9rem;
-    }
-
-    .segundo-lugar-item span {
-        font-size: 0.75rem;
-    }
-
-    /* Estilos responsive para tercer lugar - Laptop */
-    .tercer-lugar-content {
-        gap: 15px;
-        padding: 25px 15px;
-        align-items: flex-end;
-    }
-
-    .tercer-lugar-item {
-        min-height: 180px;
-    }
-
-    .tercer-lugar-item img {
-        max-width: 100px;
-        max-height: 100px;
-    }
-
-    .tercer-lugar-item div {
-        min-height: 45px;
-    }
-
-    .tercer-lugar-item p {
-        font-size: 0.9rem;
-    }
-
-    .tercer-lugar-item span {
-        font-size: 0.75rem;
-    }
-
-
-}
-
-/* Media Queries para Mobile */
-@media screen and (max-width: 768px) {
-    .premios-container {
-        padding: 20px 10px;
-    }
-
-    .premios-info {
-        width: 95%;
-        height: 500px;
-        padding: 15px;
-    }
-
-    .premios-switcher {
-        width: 95%;
-        gap: 3px;
-    }
-
-    .premios-btn {
-        padding: 8px 12px;
-        min-height: 50px;
-        font-size: 0.85rem;
-    }
-
-    .premios-section {
-        padding: 25px 15px;
-    }
-
-    #section-primer_lugar h2,
-    #section-segundo_lugar h2,
-    #section-tercer_lugar h2 {
-        font-size: 1.8rem;
-        margin-bottom: 15px;
-        text-align: center;
-    }
-
-    /* Estilos responsive para primer lugar - Móvil */
-    .primer-lugar-content {
-        flex-direction: column;
-        gap: 15px;
-        padding: 15px;
-        text-align: center;
-    }
-
-    .primer-lugar-left {
-        flex: none;
-        width: 100%;
-    }
-
-    .primer-lugar-center {
-        flex: none;
-        width: 100%;
-        order: -1;
-    }
-
-    .primer-lugar-center p {
-        font-size: 2rem;
-        margin-bottom: 10px;
-    }
-
-    .primer-lugar-right {
-        flex: none;
-        width: 100%;
-    }
-
-    .primer-lugar-img-container {
-        gap: 10px;
-    }
-
-    .primer-lugar-img-container img {
-        width: 45%;
-    }
-
-    .primer-lugar-text h3 {
-        font-size: 1rem;
-        margin-bottom: 8px;
-    }
-
-    .primer-lugar-text p {
-        font-size: 0.85rem;
-    }
-
-    .primer-lugar-right img {
-        max-width: 200px;
-    }
-
-    /* Estilos responsive para segundo lugar - Móvil */
-    .segundo-lugar-content {
-        flex-direction: column;
-        gap: 20px;
-        padding: 20px 15px;
-        text-align: center;
-    }
-
-    .segundo-lugar-item {
-        width: 100%;
-        flex-direction: row;
-        justify-content: flex-start;
-        align-items: center;
-        text-align: left;
-        gap: 15px;
-        min-height: auto;
-    }
-
-    .segundo-lugar-item img {
-        max-width: 60px;
-        margin-bottom: 0;
-        flex-shrink: 0;
-        max-height: 60px;
-    }
-
-    .segundo-lugar-item div {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        min-height: auto;
-    }
-
-    .segundo-lugar-item p {
-        font-size: 0.9rem;
-    }
-
-    .segundo-lugar-item span {
-        font-size: 0.75rem;
-    }
-
-    /* Estilos responsive para tercer lugar - Móvil */
-    .tercer-lugar-content {
-        flex-direction: column;
-        gap: 20px;
-        padding: 20px 15px;
-        text-align: center;
-    }
-
-    .tercer-lugar-item {
-        width: 100%;
-        flex-direction: row;
-        justify-content: flex-start;
-        align-items: center;
-        text-align: left;
-        gap: 15px;
-        min-height: auto;
-    }
-
-    .tercer-lugar-item img {
-        max-width: 60px;
-        margin-bottom: 0;
-        flex-shrink: 0;
-        max-height: 60px;
-    }
-
-    .tercer-lugar-item div {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        min-height: auto;
-    }
-
-    .tercer-lugar-item p {
-        font-size: 0.9rem;
-    }
-
-    .tercer-lugar-item span {
-        font-size: 0.75rem;
+    .trophy-icon {
+        width: 90px;
     }
 
     .premio-info-text h2 {
-        font-size: 2.2rem;
+        font-size: 2.3rem;
     }
 
     .premio-info-text h3 {
-        font-size: 1.7rem;
+        font-size: 1.8rem;
     }
 
-    .carousel-title {
+    .premios-img {
+        margin-bottom: 12px;
+    }
+
+    .premios-img img {
+        max-width: 90%;
+    }
+
+    .premio-info-bottom {
         font-size: 2rem;
+        margin-top: 15px;
+    }
+}
+
+/* ========== STANDARD LAPTOP (1024px - 1366px) ========== */
+@media screen and (max-width: 1366px) and (min-width: 1024px) {
+    .premios-info {
+        width: 75%;
+        height: 500px;
+        padding: 20px;
+    }
+
+    .premios-switcher {
+        width: 75%;
+    }
+
+    .premios-btn {
+        min-height: 50px;
+        font-size: 0.95rem;
+    }
+
+    .premios-section {
+        padding: 35px;
+    }
+
+    /* Premio Mayor - Standard Laptop */
+    .premio-mayor {
+        gap: 15px;
+    }
+
+    .premio-info {
+        gap: 15px;
+        flex-direction: row;
     }
 
     .trophy-icon {
         width: 80px;
     }
 
+    .premio-info-text h2 {
+        font-size: 2.1rem;
+        line-height: 1.1;
+    }
+
+    .premio-info-text h3 {
+        font-size: 1.6rem;
+        line-height: 1.2;
+    }
+
+    .premios-img {
+        margin-bottom: 10px;
+    }
+
+    .premios-img img {
+        max-width: 85%;
+    }
+
     .premio-info-bottom {
         font-size: 1.8rem;
+        margin-top: 12px;
+        text-align: center;
+    }
+
+    .premios-info-span {
+        display: inline;
+        margin-left: 5px;
+    }
+}
+
+/* ========== SMALL LAPTOP (768px - 1024px) ========== */
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+    .premios-info {
+        width: 80%;
+        height: 450px;
+        padding: 18px;
+    }
+
+    .premios-switcher {
+        width: 80%;
+        gap: 3px;
+    }
+
+    .premios-btn {
+        min-height: 45px;
+        font-size: 0.9rem;
+        padding: 6px 14px;
+    }
+
+    .premios-section {
+        padding: 30px;
+    }
+
+    /* Premio Mayor - Small Laptop */
+    .premio-mayor {
+        gap: 12px;
+    }
+
+    .premio-info {
+        gap: 12px;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .trophy-icon {
+        width: 70px;
+    }
+
+    .premio-info-text {
+        align-items: center;
+    }
+
+    .premio-info-text h2 {
+        font-size: 1.9rem;
+        line-height: 1.1;
+        text-align: center;
+    }
+
+    .premio-info-text h3 {
+        font-size: 1.4rem;
+        line-height: 1.2;
+        text-align: center;
+    }
+
+    .premios-img {
+        margin-bottom: 8px;
+    }
+
+    .premios-img img {
+        max-width: 80%;
+    }
+
+    .premio-info-bottom {
+        font-size: 1.6rem;
+        margin-top: 10px;
+        text-align: center;
+        line-height: 1.3;
+    }
+
+    .premios-info-span {
+        display: block;
+        margin-top: 5px;
+    }
+}
+/* ========== TABLET RESPONSIVE (600px - 768px) ========== */
+@media screen and (max-width: 768px) and (min-width: 600px) {
+    .premios-container {
+        padding: 20px 10px;
+    }
+
+    .premios-info {
+        width: 90%;
+        height: 400px;
+        padding: 15px;
+    }
+
+    .premios-switcher {
+        width: 90%;
+        gap: 3px;
+        flex-wrap: wrap;
+    }
+
+    .premios-btn {
+        padding: 8px 12px;
+        min-height: 40px;
+        font-size: 0.85rem;
+        flex: 1;
+        min-width: calc(50% - 2px);
+    }
+
+    .premios-section {
+        padding: 20px 15px;
+    }
+
+    /* Premio Mayor - Tablet */
+    .premio-mayor {
+        gap: 10px;
+    }
+
+    .premio-info {
+        gap: 10px;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .trophy-icon {
+        width: 60px;
+    }
+
+    .premio-info-text {
+        align-items: center;
+    }
+
+    .premio-info-text h2 {
+        font-size: 1.7rem;
+        text-align: center;
+    }
+
+    .premio-info-text h3 {
+        font-size: 1.3rem;
+        text-align: center;
+    }
+
+    .premios-img {
+        margin-bottom: 6px;
+    }
+
+    .premios-img img {
+        max-width: 75%;
+    }
+
+    .premio-info-bottom {
+        font-size: 1.4rem;
+        margin-top: 8px;
+        line-height: 1.2;
+    }
+
+    .premios-info-span {
+        display: block;
+        margin-top: 3px;
+    }
+}
+
+/* ========== MOBILE RESPONSIVE (≤ 600px) ========== */
+@media screen and (max-width: 600px) {
+    .premios-container {
+        padding: 15px 5px;
+    }
+
+    .premios-info {
+        width: 95%;
+        height: auto;
+        min-height: 350px;
+        padding: 12px;
+    }
+
+    .premios-switcher {
+        width: 95%;
+        gap: 5px;
+        flex-wrap: wrap;
+        margin-top: 200px;
+    }
+
+    .premios-btn {
+        padding: 6px 8px;
+        min-height: 35px;
+        font-size: 0.75rem;
+        flex: 1;
+        min-width: calc(50% - 3px);
+    }
+
+    .premios-section {
+        padding: 15px 10px;
+    }
+
+    /* Premio Mayor - Mobile */
+    .premio-mayor {
+        gap: 8px;
+    }
+
+    .premio-info {
+        gap: 8px;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .trophy-icon {
+        width: 50px;
+    }
+
+    .premio-info-text {
+        align-items: center;
+    }
+
+    .premio-info-text h2 {
+        font-size: 1.4rem;
+        text-align: center;
+        line-height: 1.1;
+    }
+
+    .premio-info-text h3 {
+        font-size: 1.1rem;
+        text-align: center;
+        line-height: 1.2;
+    }
+
+    .premios-img {
+        margin-bottom: 5px;
+    }
+
+    .premios-img img {
+        max-width: 70%;
+    }
+
+    .premio-info-bottom {
+        font-size: 1.2rem;
+        margin-top: 6px;
+        line-height: 1.1;
+    }
+
+    .premios-info-span {
+        display: block;
+        margin-top: 2px;
+        font-size: 1rem;
     }
 }
 
@@ -910,7 +1101,7 @@ h2 {
     }
 
     .trophy-icon {
-        width: 70px;
+        width: 50px;
     }
 
     .premio-info-bottom {
