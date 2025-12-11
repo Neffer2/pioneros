@@ -47,9 +47,6 @@
     @endphp
 
     <div class="ranking-container">
-        {{-- <a class="back-button" href="{{ route('dashboard') }}">
-            <i class="fa fa-arrow-left" id="icono-regresar" aria-hidden="true"></i> Regresar
-        </a> --}}
         <img class="pioneros-logo-about" src="{{ asset('assets/main-pioneros-logo.png') }}" alt="">
         <img class="fill-with-mobil-logo" src="{{ asset('assets/fill-with-mobil.png') }}" alt="">
 
@@ -64,7 +61,10 @@
         </div>
 
         <div class="ranking-info">
-            <div class="ranking-left-container">
+            <p style="text-align: center; text-shadow: 2px 2px 4px #000000; font-size: 54px;">
+                <span class="ranking-title" style="color: white">Próximamente rankings <br> 20 Enero del 2026.</span>
+            </p>
+            {{-- <div class="ranking-left-container">
                 <img src="{{ asset('assets/ranking.png') }}" alt="">
                 @foreach ($rankings as $i => $ranking)
                     @php
@@ -115,9 +115,10 @@
                         </div>
                     </div>
                 @endforeach
-            </div>
+            </div> --}}
         </div>
     </div>
+
     @livewire('footer-component')
 
     <script>
