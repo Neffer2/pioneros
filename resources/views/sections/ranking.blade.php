@@ -61,10 +61,10 @@
         </div>
 
         <div class="ranking-info">
-            <p style="text-align: center; text-shadow: 2px 2px 4px #000000; font-size: 54px;">
+            {{-- <p style="text-align: center; text-shadow: 2px 2px 4px #000000; font-size: 54px;">
                 <span class="ranking-title" style="color: white">Próximamente rankings <br> 20 Enero del 2026.</span>
-            </p>
-            {{-- <div class="ranking-left-container">
+            </p> --}}
+            <div class="ranking-left-container">
                 <img src="{{ asset('assets/ranking.png') }}" alt="">
                 @foreach ($rankings as $i => $ranking)
                     @php
@@ -97,14 +97,14 @@
                     @endphp
                     <div class="ranking-section" id="table-{{ $ranking['key'] }}"
                         style="display: {{ $i === 0 ? 'block' : 'none' }};">
-                        <h4 class="ranking-title">Ranking</h4>
+                        <h4 class="ranking-title">{{ $ranking['label'] }}</h4>
                         <div class="ranking-table-container">
                             <table class="ranking-table">
                                 <tbody>
                                     @foreach ($resto as $j => $agente)
                                         <tr>
                                             <td>{{ $j + 1 }}</td>
-                                            <td><strong>{{ strtolower($agente->descripcion) ?? 'Agente' }}</strong></td>
+                                            <td><strong>{{ $agente->descripcion ?? 'Agente' }}</strong></td>
                                             <td>
                                                 <b>{{ number_format($agente->{$ranking['key']}, 0) }}{{ $ranking['suf'] }}</b>
                                             </td>
@@ -115,7 +115,7 @@
                         </div>
                     </div>
                 @endforeach
-            </div> --}}
+            </div>
         </div>
     </div>
 

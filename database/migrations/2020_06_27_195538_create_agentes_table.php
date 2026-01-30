@@ -15,11 +15,11 @@ return new class extends Migration
             $table->id();
             $table->string('cod')->unique();
             $table->string('descripcion');
-            $table->integer('crecimiento_flagship')->nullable();
-            $table->integer('crecimiento_galones')->nullable();
-            $table->integer('penetracion_flagship')->nullable();
-            $table->integer('mix_flagship')->nullable();
-            $table->integer('pops_flagship')->nullable();
+            $table->double('crecimiento_flagship')->nullable();
+            $table->double('crecimiento_galones')->nullable();
+            $table->double('penetracion_flagship')->nullable();
+            $table->double('mix_flagship')->nullable();
+            $table->double('pops_flagship')->nullable();
             $table->timestamps();
         });
     }

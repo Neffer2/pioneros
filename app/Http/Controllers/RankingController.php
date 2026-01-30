@@ -50,6 +50,8 @@ class RankingController extends Controller
             ->limit(19)
             ->get();
 
+        // dd($pops_flagship);
+
         return view('sections.ranking', compact(
             'general',
             'crecimiento_flagship',
