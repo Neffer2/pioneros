@@ -1,3 +1,7 @@
+.blurred {
+    filter: blur(6px);
+}
+
 .ranking-container {
     display: flex;
     justify-content: center;
