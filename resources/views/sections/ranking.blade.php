@@ -10,6 +10,13 @@
             user-select: none;
             pointer-events: none;
         }
+        .desierto-box {
+            display: inline-block;
+            background: #444444;
+            color: #ffffff;
+            padding: 10px 16px;
+            border-radius: 8px;
+        }
     </style>
 @endpush
 @section('content')
@@ -23,13 +30,13 @@
             ],
             [
                 'key' => 'crecimiento_flagship',
-                'label' => 'Crecimiento % Flagship',
+                'label' => 'Crecimiento porcentual Flagship',
                 'data' => $crecimiento_flagship,
                 'suf' => '%',
             ],
             [
                 'key' => 'crecimiento_galones',
-                'label' => 'Crecimiento Galones',
+                'label' => 'Crecimiento neto Galones',
                 'data' => $crecimiento_galones,
                 'suf' => '',
             ],
@@ -87,7 +94,7 @@
                         style="display: {{ $i === 0 ? 'flex' : 'none' }};">
                         @if ($allZero)
                             <div class="podium-number" style="width: 100%; text-align: center;">
-                                <h1><strong>Sin ganadores.</strong></h1>
+                                <h1><span class="desierto-box">DESIERTO</span></h1>
                             </div>
                         @else
                             @php
@@ -97,32 +104,68 @@
                             @endphp
                             <div class="podium-number">
                                 @if ($id2 && $currentAgenteId && $id2 == $currentAgenteId)
-                                    <p data-tippy-content="{{ $top3[2]->descripcion ?? 'Agente' }}">
-                                        {{ strtolower($top3[2]->descripcion ?? 'Agente') }}</p>
-                                    <p><b>{{ $top3[2]->{$ranking['key']} ?? '-' }}{{ $ranking['suf'] }}</b></p>
+                                    @if ($ranking['key'] !== 'pops_flagship')
+                                        <p data-tippy-content="{{ $top3[2]->descripcion ?? 'Agente' }}">
+                                            {{ strtolower($top3[2]->descripcion ?? 'Agente') }}</p>
+                                    @endif
+                                    @if ($ranking['key'] !== 'pops_flagship')
+                                        <p><b>{{ $top3[2]->{$ranking['key']} ?? '-' }}{{ $ranking['suf'] }}</b></p>
+                                    @else
+                                        <p><b>-</b></p>
+                                    @endif
                                 @else
-                                    <p data-tippy-content="Agente" class="blurred">{{ strtolower($top3[2]->descripcion ?? 'Agente') }}</p>
-                                    <p class="blurred"><b>{{ isset($top3[2]->{$ranking['key']}) ? number_format($top3[2]->{$ranking['key']}, 0) : '-' }}{{ $ranking['suf'] }}</b></p>
+                                    @if ($ranking['key'] !== 'pops_flagship')
+                                        <p data-tippy-content="Agente" class="">{{ strtolower($top3[2]->descripcion ?? 'Agente') }}</p>
+                                    @endif
+                                    @if ($ranking['key'] !== 'pops_flagship')
+                                        <p class=""><b>{{ isset($top3[2]->{$ranking['key']}) ? number_format($top3[2]->{$ranking['key']}, 0) : '-' }}{{ $ranking['suf'] }}</b></p>
+                                    @else
+                                        <p><b>-</b></p>
+                                    @endif
                                 @endif
                             </div>
                             <div class="podium-number">
                                 @if ($id0 && $currentAgenteId && $id0 == $currentAgenteId)
-                                    <p data-tippy-content="{{ $top3[0]->descripcion ?? 'Agente' }}">
-                                        {{ strtolower($top3[0]->descripcion ?? 'Agente') }}</p>
-                                    <p><b>{{ $top3[0]->{$ranking['key']} ?? '-' }}{{ $ranking['suf'] }}</b></p>
+                                    @if ($ranking['key'] !== 'pops_flagship')
+                                        <p data-tippy-content="{{ $top3[0]->descripcion ?? 'Agente' }}">
+                                            {{ strtolower($top3[0]->descripcion ?? 'Agente') }}</p>
+                                    @endif
+                                    @if ($ranking['key'] !== 'pops_flagship')
+                                        <p><b>{{ $top3[0]->{$ranking['key']} ?? '-' }}{{ $ranking['suf'] }}</b></p>
+                                    @else
+                                        <p><b>-</b></p>
+                                    @endif
                                 @else
-                                    <p data-tippy-content="Agente" class="blurred">{{ strtolower($top3[0]->descripcion ?? 'Agente') }}</p>
-                                    <p class="blurred"><b>{{ isset($top3[0]->{$ranking['key']}) ? number_format($top3[0]->{$ranking['key']}, 0) : '-' }}{{ $ranking['suf'] }}</b></p>
+                                    @if ($ranking['key'] !== 'pops_flagship')
+                                        <p data-tippy-content="Agente" class="">{{ strtolower($top3[0]->descripcion ?? 'Agente') }}</p>
+                                    @endif
+                                    @if ($ranking['key'] !== 'pops_flagship')
+                                        <p class=""><b>{{ isset($top3[0]->{$ranking['key']}) ? number_format($top3[0]->{$ranking['key']}, 0) : '-' }}{{ $ranking['suf'] }}</b></p>
+                                    @else
+                                        <p><b>-</b></p>
+                                    @endif
                                 @endif
                             </div>
                             <div class="podium-number">
                                 @if ($id1 && $currentAgenteId && $id1 == $currentAgenteId)
-                                    <p data-tippy-content="{{ $top3[1]->descripcion ?? 'Agente' }}">
-                                        {{ strtolower($top3[1]->descripcion ?? 'Agente') }}</p>
-                                    <p><b>{{ $top3[1]->{$ranking['key']} ?? '-' }}{{ $ranking['suf'] }}</b></p>
+                                    @if ($ranking['key'] !== 'pops_flagship')
+                                        <p data-tippy-content="{{ $top3[1]->descripcion ?? 'Agente' }}">
+                                            {{ strtolower($top3[1]->descripcion ?? 'Agente') }}</p>
+                                    @endif
+                                    @if ($ranking['key'] !== 'pops_flagship')
+                                        <p><b>{{ $top3[1]->{$ranking['key']} ?? '-' }}{{ $ranking['suf'] }}</b></p>
+                                    @else
+                                        <p><b>-</b></p>
+                                    @endif
                                 @else
-                                    <p data-tippy-content="Agente" class="blurred">{{ strtolower($top3[1]->descripcion ?? 'Agente') }}</p>
-                                    <p class="blurred"><b>{{ isset($top3[1]->{$ranking['key']}) ? number_format($top3[1]->{$ranking['key']}, 0) : '-' }}{{ $ranking['suf'] }}</b></p>
+                                    @if ($ranking['key'] !== 'pops_flagship')
+                                        <p data-tippy-content="Agente" class="">{{ strtolower($top3[1]->descripcion ?? 'Agente') }}</p>
+                                    @endif
+                                    @if ($ranking['key'] !== 'pops_flagship')
+                                        <p class=""><b>{{ isset($top3[1]->{$ranking['key']}) ? number_format($top3[1]->{$ranking['key']}, 0) : '-' }}{{ $ranking['suf'] }}</b></p>
+                                    @else
+                                        <p><b>-</b></p>
+                                    @endif
                                 @endif
                             </div>
                         @endif
@@ -144,16 +187,23 @@
                                         <tr>
                                             <td>{{ $j + 1 }}</td>
                                             @php $agenteId = (data_get($agente, 'agente_id') ?? data_get($agente, 'id')); @endphp
-                                            @if ($agenteId && $currentAgenteId && $agenteId == $currentAgenteId)
-                                                <td><strong>{{ $agente->descripcion ?? 'Agente' }}</strong></td>
+                                            @if ($ranking['key'] === 'pops_flagship')
+                                                {{-- <td><strong>Agente</strong></td> --}}
                                                 <td>
-                                                    <b>{{ isset($agente->{$ranking['key']}) ? number_format($agente->{$ranking['key']}, 0) : '-' }}{{ $ranking['suf'] }}</b>
+                                                    <b>-</b>
                                                 </td>
                                             @else
-                                                <td><strong class="blurred">{{ $agente->descripcion ?? 'Agente' }}</strong></td>
-                                                <td>
-                                                    <b class="blurred">{{ isset($agente->{$ranking['key']}) ? number_format($agente->{$ranking['key']}, 0) : '-' }}{{ $ranking['suf'] }}</b>
-                                                </td>
+                                                @if ($agenteId && $currentAgenteId && $agenteId == $currentAgenteId)
+                                                    <td><strong>{{ $agente->descripcion ?? 'Agente' }}</strong></td>
+                                                    <td>
+                                                        <b>{{ isset($agente->{$ranking['key']}) ? number_format($agente->{$ranking['key']}, 0) : '-' }}{{ $ranking['suf'] }}</b>
+                                                    </td>
+                                                @else
+                                                    <td><strong class="blurred">{{ $agente->descripcion ?? 'Agente' }}</strong></td>
+                                                    <td>
+                                                        <b class="blurred">{{ isset($agente->{$ranking['key']}) ? number_format($agente->{$ranking['key']}, 0) : '-' }}{{ $ranking['suf'] }}</b>
+                                                    </td>
+                                                @endif
                                             @endif
                                         </tr>
                                     @endforeach

@@ -2,6 +2,13 @@
     filter: blur(6px);
 }
 
+.desierto-box {
+    background-color: #444444;
+    color: #ffffff;
+    padding: 10px 95px 3px 95px;
+    border-right: #ff141e 6px solid;
+}
+
 .ranking-container {
     display: flex;
     justify-content: center;
