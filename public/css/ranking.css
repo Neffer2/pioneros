@@ -23,8 +23,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 60%;
-    height: 600px;
+    width: 80%;
+    height: 700px;
     gap: 25px;
     padding: 20px;
     background-image: url('../assets/fondo-ranking-general.png');
@@ -162,6 +162,7 @@
 .podium-names {
     display: flex;
     justify-content: center;
+    align-items: flex-end;
     width: 100%;
     position: relative;
     padding: 0 40px;
@@ -177,17 +178,27 @@
     width: 33.33%;
 }
 
+/* El puesto central del marcado (1er lugar) sobresale sobre los demás */
+.podium-number:nth-child(2) {
+    z-index: 2;
+    transform: translateY(-30px) scale(1.12);
+}
+
 
 
 .podium-number p:first-child {
-    max-width: 130px;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    padding: 0 2px;
     font-size: 1.2rem;
     color: #fff;
     text-transform: uppercase;
     text-shadow: 0 1px 2px #1a357a, 0 -1px 1px #888;
     margin-bottom: 5px;
     font-weight: bold;
-    /* white-space: nowrap; */
+    white-space: nowrap;
+    /* overflow: hidden; */
     text-overflow: ellipsis;
     cursor: pointer;
 }
@@ -257,7 +268,7 @@
 
     .podium-number p:first-child {
         font-size: 1rem;
-        max-width: 60px;
+        max-width: 100%;
     }
 
     .podium-number p:nth-child(2) {
@@ -301,7 +312,7 @@
 
     .podium-number p:first-child {
         font-size: 0.9rem;
-        max-width: 50px;
+        max-width: 100%;
     }
 
     .podium-number p:nth-child(2) {
@@ -378,9 +389,13 @@
         padding: 0 20px;
     }
 
+    .podium-number:nth-child(2) {
+        transform: translateY(-18px) scale(1.08);
+    }
+
     .podium-number p:first-child {
         font-size: 0.8rem;
-        max-width: 40px;
+        max-width: 100%;
     }
 
     .podium-number p:nth-child(2) {
@@ -445,9 +460,13 @@
         padding: 0 10px;
     }
 
+    .podium-number:nth-child(2) {
+        transform: translateY(-12px) scale(1.05);
+    }
+
     .podium-number p:first-child {
         font-size: 0.7rem;
-        max-width: 35px;
+        max-width: 100%;
     }
 
     .podium-number p:nth-child(2) {
